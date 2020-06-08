@@ -156,7 +156,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Uma imersão de criatividade e experimentação, que vai te guiar por um processo de inovação com a abordagem do Excel Aplicado a Negócios</h1>
+          <h2>Uma imersão de criatividade e experimentação, que vai te guiar por um processo de inovação com a abordagem do Excel Aplicado a Negócios</h2>
           <h6>O curso possui uma abordagem inovadora, trazendo diversos conceitos da gestão empresarial para os participantes, que terão como apoio para desenvolver suas análises a ferramenta MS Excel. Através de casos práticos e reais, com enfoque em diversos setores da economia e de diversas áreas organizacionais das empresas, o participante passará pelas principais funcionalidades desse software de uma forma prática e orientada ao mercado.</h6>
         </div>
       </div>
@@ -186,7 +186,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 title">
-          <h1>Metotologia</h1>
+          <h2>Metotologia</h2>
           <p>Writers and stars of Veep have responded incredulously to the news an Australian politician required preinstalled stitches way email client, calendar, mapping program.</p>
 
           <h3>Metodologia 1</h3>
@@ -216,7 +216,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 title">
-          <h1>O que você vai aprender</h1>
+          <h2>O que você vai aprender</h2>
           <ul class="to-know">
             <li>1 - Conhecendo e aplicando os principais recursos do MS Excel 2007</li>
             <li>2 - Como ganhar produtividade para analisar e apresentar dados no Excel</li>
@@ -241,7 +241,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Professores</h1>
+          <h2>Professores</h2>
           <h6>Nossos professores ensinam a noite o que fazem durante o dia. Trazem toda sua experiência de mercado para te ajudar a chegar onde você merece</h6>
         </div>
       </div>
@@ -297,11 +297,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Investimento</h1>
+          <h2>Investimento</h2>
         </div>
 
         <div class="col-md-12 title">
-          <h1>aqui vai entrar o pagamento</h1>
+          <h2>aqui vai entrar o pagamento</h2>
         </div>
       </div>
     </div>
@@ -311,7 +311,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Perguntas frequentes:</h1>
+          <h2>Perguntas frequentes:</h2>
         </div>
       </div>
 

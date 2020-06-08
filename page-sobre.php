@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Somos a empresa que elabora soluções em ensino, pesquisa e consultoria em gestão para você e pra sua organização.</h1>
+          <h2>Somos a empresa que elabora soluções em ensino, pesquisa e consultoria em gestão para você e pra sua organização.</h2>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@
       <div class="row">
         <div class="col-md-6 carousel-historia">
 
-          <div class="row">
+          <div class="row desktop">
             <div class="col-md-12">
               <div id="quote-carousel" class="carousel slide" data-ride="carousel">
             <!-- The slideshow -->
@@ -144,6 +144,44 @@
             <div class="col-md-12"><p>o IEG foi criado em 2008 por três engenheiros, ex-alunos da UFRJ, e ao longo dos anos a empresa foi desenvolvendo expertise e se consolidando no mercado, tornando-se referência em treinamentos, projetos e pesquisas voltados para gestão.</p></div>
           </div>
       </div>
+
+        <div class="row mobile">
+            <div class="col-md-12">
+              <div id="quote-carousel" class="carousel slide" data-ride="carousel">
+            <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/nossa-historia.jpg" width="100%">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/nossa-historia.jpg" width="100%">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/nossa-historia.jpg" width="100%">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/nossa-historia.jpg" width="100%">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/nossa-historia.jpg" width="100%">
+                  </div>
+                </div>
+
+                <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li><a class="carousel-control-prev" href="#quote-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a></li>
+                <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#quote-carousel" data-slide-to="1"></li>
+                <li data-target="#quote-carousel" data-slide-to="2"></li>
+                <li><a class="carousel-control-next" href="#quote-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span></a></li>
+              </ul>
+
+              </div>
+            </div>
+          </div>
     </div>
   </section>
 
@@ -151,7 +189,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>O que é Engenharia de Gestão?</h1>
+          <h2>O que é Engenharia de Gestão?</h2>
           <p>A Engenharia de Gestão otimiza e aperfeiçoa processos, construindo modelos de gestão para tomadas de decisão dentro de um negócio. O objetivo principal é produzir conhecimento, aumentar produtividade e gerar resultados. Por isso, nós utilizamos esse conceito dentro de nossas áreas de atuação: Escola de Negócios, Pesquisa e Consultoria em Gestão.</p>
         </div>
       </div>

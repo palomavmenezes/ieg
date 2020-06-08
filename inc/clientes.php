@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 title-parceiros">
-          <h1> Empresas que já treinamos </h1>
+          <h2> Empresas que já treinamos </h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 

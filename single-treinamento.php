@@ -6,13 +6,24 @@ $description_text = get_field( 'description_text', $post->ID );
 $objective_text = get_field( 'objective_text', $post->ID );
 $training_text = get_field( 'training_text', $post->ID );
 $companies = get_field( 'companies', $post->ID );
+$descriptionnumeros = get_field( 'descriptionnumeros', $post->ID ); 
+$number_colum_one = get_field( 'number_colum_one', $post->ID );
+$number_colum_two = get_field( 'number_colum_two', $post->ID );
+$number_colum_thre = get_field( 'number_colum_thre', $post->ID );
+$title_number_one = get_field( 'title_number_one', $post->ID );
+$title_number_two = get_field( 'title_number_two', $post->ID );
+$title_number_thre = get_field( 'title_number_thre', $post->ID ); 
+$description_number_one = get_field( 'description_number_one', $post->ID );
+$description_number_two = get_field( 'description_number_two', $post->ID );
+$description_number_thre = get_field( 'description_number_thre', $post->ID );
+$imagem_banner = get_field( 'imagem_banner', $post->ID );
 
 get_header();
 ?> 
 
 <main id="page-treinamento-interna">
 
- <section class="banner-treinamento-interna">
+ <section class="banner-treinamento-interna" style="background-size: cover !important; background: url(<?php echo $imagem_banner; ?>) right no-repeat;">
   <div class="container-fluid">
    <div class="row b-home-slides">
     <div class="col-md-12">
@@ -46,7 +57,7 @@ get_header();
   <div class="container">
    <div class="row">
     <div class="col-md-12 title">
-     <h1><?php echo $description_title ?></h1>
+     <h2><?php echo $description_title ?></h2>
      <h6><?php echo $description_text ?></h6>
    </div>
  </div>
@@ -55,7 +66,7 @@ get_header();
 <!------- FIM DA SEÇÃO IMERÇÃO --------->
 
 
-<section id="bloco-pesquisa">
+<!-- <section id="bloco-pesquisa">
   <div class="container">
    <div class="row bg-treinamento-interno">
     <div class="col-md-5 pesquisa">
@@ -70,34 +81,52 @@ get_header();
    </div>
  </div>
 </div>
-</section>
+</section> -->
 
 <section id="our-numbers">
   <div class="container">
    <div class="row">
     <div class="col-12 title">
-     <h1>Nossos números</h1>
-     <p>Writers and stars of Veep have responded incredulously to the news an Australian politician required preinstalled stitches way email client, calendar, mapping program.Writers and stars of Veep have responded incredulously to the news an Australian.</p>
+     <h2>Nossos números</h2>
+     <p><?php echo $descriptionnumeros ?></p>
    </div>
  </div>
  <div class="row">
   <div class="col numbers-title">
-   <h1>1200</h1>
-   <h6>sobre o número</h6>
-   <p>Apresentação de cases de empresas que já possuem CSC, incentivando os participantes a resolverem um problema específico relacionado ao tema e a compartilharem práticas e soluções.</p></div>
+   <h3><?php echo $number_colum_one ?></h2>
+   <h6><?php echo $title_number_one ?></h6>
+   <p><?php echo $description_number_one ?></p></div>
    <div class="col numbers-title">
-    <h1>1200</h1>
-    <h6>sobre o número</h6>
-    <p>Apresentação de cases de empresas que já possuem CSC, incentivando os participantes a resolverem um problema específico relacionado ao tema e a compartilharem práticas e soluções.</p></div>
+    <h2><?php echo $number_colum_two ?></h2>
+    <h6><?php echo $title_number_two ?></h6>
+    <p><?php echo $description_number_two ?></p></div>
     <div class="col numbers-title">
-     <h1>1200</h1>
-     <h6>sobre o número</h6>
-     <p>Apresentação de cases de empresas que já possuem CSC, incentivando os participantes a resolverem um problema específico relacionado ao tema e a compartilharem práticas e soluções.</p></div>
+     <h2><?php echo $number_colum_thre ?></h2>
+     <h6><?php echo $title_number_thre ?></h6>
+     <p><?php echo $description_number_thre ?></p></div>
    </div>
  </div>
 </section>
 
-<?php get_template_part('inc/clientes'); ?>
+<?php if($companies != null && count($companies ) > 0 ): ?>
+<section id="empresas-parceiras">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 title-parceiros">
+          <h2> Empresas que já treinamos </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <?php foreach ($companies  as $company) : ?>
+        <div class="col-md-3 parceiros">
+          <img src="<?= $company['logo'] ?>">
+        </div>
+        
+        <?php endforeach ?>       
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
 <?php get_template_part('inc/depoimentos'); ?>
 <?php get_template_part('inc/contact'); ?>
 
@@ -119,28 +148,28 @@ get_header();
         <div class="row">
          <div class="col-md-12 bg-yellow">
           <div class="row">
-           <div class="col-12 title-treinamentos"><h1>Para aumentar a produtividade</div>
+           <div class="col-12 title-treinamentos"><h3>Para aumentar a produtividade</h3></div>
             <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
             <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
           </div>
         </div>
         <div class="col-md-12 bg-green">
          <div class="row">
-          <div class="col-12 title-treinamentos"><h1>Para analisar dados de forma precisa</div>
+          <div class="col-12 title-treinamentos"><h3>Para analisar dados de forma precisa</h3></div>
            <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
            <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
          </div>
        </div>
        <div class="col-md-12 bg-blue">
         <div class="row">
-         <div class="col-12 title-treinamentos"><h1>Para criar uma cultura eficaz</div>
+         <div class="col-12 title-treinamentos"><h3>Para criar uma cultura eficaz</h3></div>
           <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
           <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
         </div>
       </div>
       <div class="col-md-12 bg-purple">
        <div class="row">
-        <div class="col-12 title-treinamentos"><h1>Para aprimorar a comunicação</div>
+        <div class="col-12 title-treinamentos"><h3>Para aprimorar a comunicação</h3></div>
          <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
          <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
        </div>
@@ -154,28 +183,28 @@ get_header();
   <div class="row">
    <div class="col-md-12 bg-purple">
     <div class="row">
-     <div class="col-12 title-treinamentos"><h1>Para aumentar a produtividade</div>
+     <div class="col-12 title-treinamentos"><h3>Para aumentar a produtividade</h3></div>
       <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
       <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
     </div>
   </div>
   <div class="col-md-12 bg-green">
    <div class="row">
-    <div class="col-12 title-treinamentos"><h1>Para analisar dados de forma precisa</div>
+    <div class="col-12 title-treinamentos"><h3>Para analisar dados de forma precisa</h3></div>
      <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
      <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
    </div>
  </div>
  <div class="col-md-12 bg-blue">
   <div class="row">
-   <div class="col-12 title-treinamentos"><h1>Para criar uma cultura eficaz</div>
+   <div class="col-12 title-treinamentos"><h3>Para criar uma cultura eficaz</h3></div>
     <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
     <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
   </div>
 </div>
 <div class="col-md-12 bg-yellow">
  <div class="row">
-  <div class="col-12 title-treinamentos"><h1>Para aprimorar a comunicação</div>
+  <div class="col-12 title-treinamentos"><h3>Para aprimorar a comunicação</h3></div>
    <div class="col-12 description-treinamentos"><p>Breve descrição do evento</p></div>
    <div class="col-12 btn-align"><button type="button" class="btn btn-light btn-know">Conheça</button></div>
  </div>

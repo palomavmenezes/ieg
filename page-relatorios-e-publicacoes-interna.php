@@ -37,8 +37,8 @@ get_header();
 	<section id="apresentacao">
 			<div class="container">
 				<div class="row objetivo">
-					<div class="col-md-6 title">
-						<h3>Título <br>Apresentação</h3>
+					<div class="col-md-6">
+						<h2>Título <br>Apresentação</h2>
 						<h6>O curso possui uma abordagem inovadora, trazendo diversos conceitos da gestão empresarial para os participantes, que terão como apoio para desenvolver suas análises a ferramenta MS Excel. Através de casos práticos e reais, com enfoque em diversos setores da economia e de diversas áreas organizacionais das empresas, o participante passará pelas principais funcionalidades desse software de uma forma prática e orientada ao mercado.</h6>
 					</div>
 					<div class="col-md-6 title">
@@ -52,7 +52,7 @@ get_header();
 	<section id="capitulos">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12"><h1>Capítulos</h1></div>
+				<div class="col-md-12"><h2>Capítulos</h2></div>
 				<div class="buttons-pesquisa-interna">
 				  <button class="btn btn-black-radiusl" type="button" data-toggle="collapse" data-target="#BenchmarkemCSC" aria-expanded="false" aria-controls="collapseExample">
 				    Benchmark em CSC
@@ -111,7 +111,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 
-				<div class="col-md-12"><h1>Versão Ilustrativa</h1></div>
+				<div class="col-md-12"><h2>Versão Ilustrativa</h2></div>
 				<div class="buttons-pesquisa-interna">
 				  <button class="btn btn-black-radiusl" type="button" data-toggle="collapse" data-target="#Resultados1" aria-expanded="false" aria-controls="collapseExample">
 				    Benchmark em CSC
@@ -209,7 +209,7 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 title">
-						<h1>Conheça outras soluções do IEG que podem alavancar a gestão da sua empresa</h1>
+						<h2>Conheça outras soluções do IEG que podem alavancar a gestão da sua empresa</h2>
 					</div>
 				</div>
 
@@ -236,6 +236,8 @@ get_header();
 
 					<div class="col-md-4 bloco-solucoes">
 						<h5>Plano de Negócio</h5>
+						<br>
+						<br>
 						<button type="button" class="btn btn-light btn-solucoesieg" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
 					</div>
 

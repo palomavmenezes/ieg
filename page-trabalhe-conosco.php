@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Valores de quem trabalha no IEG</h1>
+          <h2>Valores de quem trabalha no IEG</h2>
           <h6>Writers and stars of Veep have responded incredulously to the news an Australian politician<br> required preinstalled stitches way email client, calendar, mapping program.</h6>
         </div>
       </div>
@@ -75,7 +75,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Trabalhe no IEG</h1>
+          <h2>Trabalhe no IEG</h2>
           <h6>Writers and stars of Veep have responded incredulously to the news an Australian politician<br> required preinstalled stitches way email client, calendar, mapping program.</h6>
         </div>
       </div>

@@ -10,6 +10,13 @@ Version: 1.0.0
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+html, body {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #575758;
+}
+
 html {
     height: 100%;
     min-height: 100%;
@@ -18,7 +25,6 @@ html {
 body {
   background: #fff;
   color: #444;
-  font-family: "Poppins", sans-serif;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -34,6 +40,12 @@ body {
   .container-fluid {
   max-width: 1334px;
   margin: 0
+  }
+
+  .container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 100px;
   }
 }
 
@@ -56,13 +68,25 @@ a:focus {
   text-decoration: none;
 }
 
+.current_page_item a {
+    font-weight: 600 !important;
+    color: #0E1B59 !important;
+}
+
+h1 { font-size: 52px; font-family: "Poppins-Bold"; }
+h2 { font-size: 48px; font-family: "Poppins-SemiBold"; }
+h3 { font-size: 36px; font-family: "Poppins-SemiBold"; }
+h4 { font-size: 30px; font-family: "Poppins-Bold"; }
+h5 { font-size: 20px; font-family: "Poppins-Bold"; }
+h6 { font-size: 16px; font-family: "Poppins"; }
+p { font-size: 16px; font-family: "Poppins"; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -89,11 +113,10 @@ h6 {
 /* TOP BAR */
 
 .top-bar ul {
-    margin: 5px 0px;
+    margin: 5px 15px 0px 0px;
 }
 
 .top-bar li {
-    font-family: Poppins;
     display: inline;
     margin: 0px 0px 0 10px;
     text-align: left;
@@ -104,6 +127,7 @@ h6 {
 
 #header-top {
     background: transparent linear-gradient(268deg, #0C0E41 0%, #1760D7 100%) 0% 0% no-repeat padding-box;
+    padding-bottom: 7px;
 }
 
 .top-bar {
@@ -166,13 +190,14 @@ div#menu {
 .main-nav a {
     display: block;
     position: relative;
-    color: #000;
-    padding: 10px 0px 10px 40px;
+    color: #575758;
+    font-size: 16px;
+    padding: 10px 0px 5px 0px;
+    margin-left: 20px;
+    margin-top: 5px;
     transition: 0.3s;
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
-    margin-top: 5px 0;
+    font-size: 16px;
 }
 
 .main-nav a:hover,
@@ -209,7 +234,6 @@ div#menu {
 
 .main-nav .drop-down ul a {
   padding: 10px 20px;
-  font-size: 13px;
   color: #113589;
 }
 
@@ -284,14 +308,15 @@ div#menu {
     position: fixed;
     left: 0;
     right: 0;
-    top: 140px;
+    top: 0px;
     padding: 20px;
     background: #fff;
+    z-index: 1;
+    width: 75%;
 }
 
 .navbar-collapse li {
     margin: 0;
-    font-size: 18px;
     padding: 5px 15px;
     border-bottom: 1px solid #c1c1c1;
 }
@@ -324,7 +349,7 @@ div#menu {
 
 @media only screen and (max-width: 1024px) {
   .logo.float-left {
-    margin-left: 20px;
+    margin-left: -15px;
   }
 }
 
@@ -335,7 +360,6 @@ div#menu {
     place-items: center;
     box-shadow: 0 0 3px #a1a1a1;
     z-index: 1;
-    margin-top: 32px;
 }
 
 #header.header-scrolled,
@@ -346,11 +370,12 @@ div#menu {
     right: 0;
     top: 0;
     position: fixed;
+    z-index: 999999;
+    transition-duration: 0.6s;
     }
 }
 
 #header .logo h1 {
-  font-size: 36px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -375,6 +400,13 @@ div#menu {
   margin-top: 60px;
 }
 
+#header .show {
+    height: 100vh;
+    width: 75%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+}
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
@@ -384,11 +416,8 @@ div#menu {
 
 @media screen and (max-width: 629px) {
   #header .logo img {
-    margin: -10px 30px;
+    margin: -10px 0px -10px 20px;
     max-height: 60px;
-  }
-  #header {
-    margin-top: 60px;
   }
 }
 
@@ -405,23 +434,30 @@ div#menu {
 
 #banner h1 {
     color: #fff;
-    font-family: "Poppins-Bold";
-    font-size: 42px;
     text-align: center;
     margin: 200px 0px;
 /*    text-shadow: 0 0 4px grey; */
 }
 
-@media only screen and (max-width: 630px) {
-  section#banner h1, .title-events h1 {
-    font-size: 30px !important;
+@media (max-width: 630px) {
+  .col-md-6.second-slide {
+    margin-left: 0 !important;
+  }
+
+  .events {
+    height: auto !important;
+    margin-right: -15px !important;
+  }
+
+  .events .col-md-6 {
+    padding: 0;
   }
 }
 
 /* Breadcrumb */
 
 .breadcrumb a {
-    color: #000000;
+    color: #575758;
     opacity: 0.58;
 }
 
@@ -438,15 +474,12 @@ section#breadcrumb {
 --------------------------------------------------------------*/
 
 .title-events h1 {
-    font-size: 38px;
-    font-family: "Poppins-Bold";
-    color: #000;
+    color: #575758;
     text-align: center;
     margin-top: 30px;
 }
 
 .title-events p {
-    font-size: 12px;
     color: #737373;
     text-align: center;
 }
@@ -463,7 +496,6 @@ section#breadcrumb {
 --------------------------------*/
 
 .section-header h3 {
-  font-size: 36px;
   color: #283d50;
   text-align: center;
   font-weight: 500;
@@ -473,7 +505,6 @@ section#breadcrumb {
 .section-header p {
   text-align: center;
   margin: auto;
-  font-size: 15px;
   padding-bottom: 60px;
   color: #556877;
   width: 50%;
@@ -500,21 +531,18 @@ section#breadcrumb {
 }
 
 .title-events-carousel h3 {
-    font-size: 25px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #110729;
+    color: #575758;
 }
 
 .description h4 {
-    font-size: 25px;
-    color: #000000;
+    color: #575758;
     margin-bottom: 5px;
     margin-top: 20px;
 }
 
 .description p {
-    font-size: 17px;
     color: #959597;
     line-height: 1.4;
     margin: 0;
@@ -523,16 +551,26 @@ section#breadcrumb {
 .btn-events {
     background: #12378B;
     color: #fff;
-    font-size: 12px;
     border-radius: 0px;
-    padding: 20px 20px;
+    padding: 15px 20px;
     margin-top: 15px;
     letter-spacing: 1.8px;
     font-weight: 900;
+    border-radius: 4px;
+    height: 50px;
+    width: auto;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+.btn-events:hover {
+  color: #303030;
+  color: #fff;
 }
 
 .btn-events img {
-    width: 15px;
+    width: 15px !important;
+    display: inline-block !important;
     margin-left: 40px;
 }
 
@@ -575,12 +613,10 @@ img.img-slide-events {
 }
 
 .description {
-    margin-left: 30px !important;
-    background: #F8F9FB;
+    margin-left: 60px !important;
     margin: 0;
-    padding: 105px 50px;
+    padding: 0 20px;
 }
-
 
 /* CSS Treinamentos */
 
@@ -589,8 +625,12 @@ section#treinamentos {
     background: #F8F9FB;
 }
 
-.row.events {
+.events {
+    display: flex;
+    place-items: center;
     margin-right: 0;
+    height: 398px;
+    background: #F8F9FB;
 }
 
 .col-md-6.second-slide {
@@ -605,8 +645,7 @@ div#carouselExampleControls {
     margin: 25px 0px;
 }
 
-.title-treinamentos h1 {
-    font-size: 26px;
+.title-treinamentos h4 {
     text-transform: uppercase;
     color: #fff;
     padding: 100px 20px 0px;
@@ -614,29 +653,32 @@ div#carouselExampleControls {
 }
 
 .description-treinamentos p {
-    font-size: 15px;
-    color: #000;
+    color: #575758;
     opacity: 0.4;
     margin: 20px 0px 30px;
 }
 
 .btn-know {
     background: #12378B;
-    padding: 9px 80px;
+    width: 200px;
     border-radius: 0;
     color: #fff;
     font-size: 18px;
+    font-family: "Poppins-Bold";
+    padding: 10px 0;
+    border-radius: 4px;
 }
 
 .btn-treinamentos {
-    border: 1px solid #12378B;
-    border-radius: 100px;
-    width: 250px;
-    height: 50px;
-    font-size: 15px;
+    box-shadow: 0 0 5px #c1c1c1;
+    border-radius: 100px !important;
+    width: 200px;
     color: #12378B;
     margin: 15px 0px;
     background: #fff;
+    font-size: 18px;
+    font-family: "Poppins";
+    padding: 10px 0;
 }
 
 div#treinamentosCarousel {
@@ -646,6 +688,10 @@ div#treinamentosCarousel {
 #carousel-treinamentos a.carousel-control-prev, #carousel-treinamentos a.carousel-control-next {
     margin-top: -45px;
 }
+
+.arrows {
+    float: right;
+  }
 
 .btn-align {
     text-align: center !important;
@@ -704,15 +750,13 @@ section#carousel-treinamentos {
 
 /* Seção Empresas Parceiras */
 
-.title-parceiros h1 {
-    font-size: 38px;
-    color: #000;
-    font-family: "Poppins-Bold";
+.title-parceiros h2 {
+    color: #575758;
     text-align: center;
 }
 
 #empresas-parceiras {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .parceiros {
@@ -727,41 +771,39 @@ section#carousel-treinamentos {
 }
 
 #depoimentos {
-    background: #0E1B59;
+    background: #fff;
+    color: #575758;
     padding: 100px 0px 50px;
+    box-shadow: 0 0 5px #c1c1c1;
 }
 
 #depoimentos ol.carousel-indicators {
     margin: 20px 0px;
 }
 
-.title-testemonial h1 {
-    font-size: 36px;
+.title-testemonial h2 {
     text-align: center;
-    color: #fff;
-    font-family: "Poppins";
+    color: #575758;
     letter-spacing: 2.88px;
-    font-weight: 899;
 }
 
 .title-testemonial p {
-    font-size: 16px;
     text-align: center;
     margin: 20px 300px;
-    color: #fff;
+    color: #575758;
     font-weight: normal;
     opacity: 0.8;
 }
 
 .content-testemonial {
-    background: #fff;
+    background: #F8F9FB;
     margin: 20px 15px;
     max-width: 47%;
     padding: 30px;
+    min-height:390px;
 }
 
 .content-testemonial p {
-    font-size: 12px;
     margin: 15px 0px;
     color: #333457;
 }
@@ -770,8 +812,6 @@ section#carousel-treinamentos {
     color: #21223F;
     margin-top: 20px;
     margin-bottom: 5px;
-    font-size: 20px;
-    font-family: "Poppins-Bold";
 }
 
 .photo-testemonial img {
@@ -782,22 +822,23 @@ section#carousel-treinamentos {
 /* Form Information */
 
 #information {
-    background: #000000CC;
+    background: #12378B;
     color: #fff;
     text-align: center;
     padding: 100px 0px 60px;
-    font-family: "Poppins-Bold";
 }
 
 .form-ieg {
     background: transparent;
-    border: 2px solid #5C5C5C;
+    border: 1px solid #fff;
     border-radius: 0;
     height: 60px;
-    font-size: 12px;
-    color: #5C5C5C;
+    color: #fff;
     padding: 0 20px 0px 50px;
-    font-family: "Poppins-SemiBold";
+}
+
+#banner-contato .form-ieg {
+   border: 1px solid #575758;
 }
 
 textarea#mensagem {
@@ -812,17 +853,17 @@ textarea#mensagem {
 	background: transparent !important;
 }
 
-#information h1 {
+#information h2 {
     margin-bottom: 30px;
-    font-family: "Poppins-Bold";
 }
 
 .btn-information {
-    width: 219px;
-    height: 61px;
+    width: 200px;
     margin-top: 30px;
-    font-size: 12px;
-    font-family: "Poppins-SemiBold";
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    padding: 10px 0;
+    border-radius: 4px;
 }
 
 .input-icons i { 
@@ -841,6 +882,38 @@ textarea#mensagem {
     margin-top: 20px;
     opacity: 0.5;
     left: 228px;
+}
+
+::-webkit-input-placeholder {
+    color: #fff !important;
+}
+
+:-moz-placeholder{
+    color: #fff !important;
+}
+
+::-moz-placeholder {
+    color: #fff !important;
+}
+
+:-ms-input-placeholder {
+    color: #fff !important;
+}
+
+#banner-contato ::-webkit-input-placeholder {
+    color: #575758 !important;
+}
+
+#banner-contato :-moz-placeholder{
+    color: #575758 !important;
+}
+
+#banner-contato ::-moz-placeholder {
+    color: #575758 !important;
+}
+
+#banner-contato :-ms-input-placeholder {
+    color: #575758 !important;
 }
 
 /*--------------------------------------------------------------
@@ -871,7 +944,6 @@ ul.social-icons {
 
 .colum-1 p, .colum-2 p, .colum-3 p {
     margin-top: 10px;
-    font-size: 12px;
     color: #22262A;
 }
 
@@ -880,7 +952,6 @@ ul.social-icons {
 }
 
 .colum-2 h4, .colum-3 h4 {
-    font-size: 18px;
     color: #22262A;
     margin-top: 20px;
 }
@@ -898,20 +969,16 @@ ul.social-icons {
 
 .t-colum-1 h4, .t-colum-2 h4, .t-colum-3 h4, .t-colum-4 h4, .t-colum-5 h4, .t-colum-6 h4 {
     color: #22262A;
-    font-size: 18px;
     font-weight: 900;
 }
 
 .t-colum-1 li, .t-colum-2 li, .t-colum-3 li, .t-colum-4 li, .t-colum-5 li, .t-colum-6 li {
-    font-size: 12px;
     color: #262626;
     display: flex;
     margin: 5px 0px;
 }
 
 footer a.scrollto.logo-ieg {
-    font-size: 36px;
-    font-family: "Poppins-Bold";
     color: #0C0E41;
 }
 
@@ -958,10 +1025,6 @@ ul.menu-footer a {
     margin: 0px 20px;
   }
 
- #information h1 {
-    font-size: 35px;
-  }
-
   .icon {
     padding: 10px;
     min-width: 40px;
@@ -988,7 +1051,7 @@ ul.menu-footer a {
   }
 
   img.img-slide-events {
-    width: 69%;
+    width: 100%;
     height: auto;
   }
 
@@ -1009,7 +1072,10 @@ ul.menu-footer a {
   }
 
   .btn-treinamentos {
-    width: 150px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins";
+    padding: 10px 0;
   }
 
   .bg-yellow, .bg-green, .bg-blue, .bg-purple {
@@ -1065,29 +1131,23 @@ ul.menu-footer a {
     color: #fff;
 }
 
-.b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
-}
-
-
 .b-home-slides h6 {
     margin-top: 30px;
     text-align: center;
-    font-size: 12px;
     font-weight: 100;
     line-height: 1.5;
 }
 
 .btn.slide-home {
     width: 200px;
-    height: 50px;
     background: #FFC600;
     border-radius: 4px;
     opacity: 1;
     margin-top: 20px;
     color: #fff;
-    font-weight: 900;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    padding: 10px 0;
 }
 
 #pq-estudar {
@@ -1098,18 +1158,11 @@ ul.menu-footer a {
     text-align: center;
 }
 
-#home #cursosemdestaque .title h1 {
+#home #cursosemdestaque .title h2 {
     margin-top: 50px !important;
 }
 
-.title h1 {
-    font-family: "Poppins-Semibold";
-    color: #000;
-    font-size: 38px;
-}
-
 .title h6 {
-    font-size: 14px;
     letter-spacing: 0;
     color: #737373;
     line-height: 1.5;
@@ -1124,8 +1177,6 @@ ul.menu-footer a {
 
 .title-bloco {
     color: #172541;
-    font-family: "Poppins-Bold";
-    font-size: 17px;
 }
 
 .text-bloco {
@@ -1137,9 +1188,7 @@ ul.menu-footer a {
 }
 
 .bloco-cursos .title-bloco {
-    color: #000;
-    font-family: "Poppins";
-    font-size: 20px;
+    color: #575758;
     margin: 0;
 }
 
@@ -1151,7 +1200,6 @@ ul.menu-footer a {
 
 .bloco-cursos .text-bloco {
     color: #999999;
-    font-size: 15px;
     margin-bottom: 10px;
 }
 
@@ -1179,14 +1227,11 @@ ul.menu-footer a {
 
 p.text-bloco {
     min-height: 45px;
-    font-size: 14px;
     margin-bottom: 0;
 }
 
 .valor-curso {
     color: #0C0E41;
-    font-family: "Poppins-Bold";
-    font-size: 18px;
     line-height: 18px;
 }
 
@@ -1200,15 +1245,13 @@ ins {
 }
 
 .title-bloco a {
-    font-size: 20px;
     letter-spacing: 0.4px;
-    color: #000000;
+    color: #575758;
 }
 
 .text-bloco a {
-    font-size: 15px;
     letter-spacing: 0.24px;
-    color: #000000;
+    color: #575758;
     opacity: 0.4;
     padding: 0;
     margin: 0;
@@ -1307,10 +1350,8 @@ ins {
     text-align: left;
 }
 
-#solucoes-do-ieg .title h1 {
-    font-family: "Poppins-Semibold";
-    color: #000;
-    font-size: 38px;
+#solucoes-do-ieg .title h2 {
+    color: #575758;
     margin: 70px;
 }
 
@@ -1327,8 +1368,6 @@ ins {
 
 #page-consultoria-interna .bloco-solucoes h5, #page-pesquisa-interna .bloco-solucoes h5 {
     letter-spacing: 2px;
-    font-family: "Poppins-Bold";
-    font-size: 20px;
 }
 
 #home #empresas-parceiras {
@@ -1345,16 +1384,13 @@ ins {
     padding: 0;
   }
 
-  .b-home-slides h1 {
-    font-size: 30px;
-    font-family: "Poppins-Bold";
+  #solucoes-do-ieg .title h2 {
+    color: #575758;
+    margin: 50px 20px;
   }
 
-  #solucoes-do-ieg .title h1 {
-    font-family: "Poppins-Semibold";
-    color: #000;
-    font-size: 38px;
-    margin: 50px 20px;
+  #consultoria-right, #consultoria-left {
+    padding: 0 30px;
   }
 }
 
@@ -1396,7 +1432,6 @@ input#txtBusca {
     padding: 8px 20px;
     border-radius: 25px;
     border: 1px solid #475677;
-    font-size: 15px;
     margin: 50px 0px 20px;
     text-align: center;
     max-width: 100%;  
@@ -1427,8 +1462,6 @@ input#txtBusca {
 }
 
 #page-pra-sua-empresa .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
 }
 
@@ -1436,7 +1469,7 @@ input#txtBusca {
     margin-bottom: 40px;
     background: #FAFAFA;
     padding: 100px 75px;
-    text-align: center;
+    text-align: left;
 }
 
 .bg-pesquisa {
@@ -1445,23 +1478,20 @@ input#txtBusca {
 }
 
 h3.titles-sua-empresa {
-    text-align: center;
-    font-size: 30px;
+    text-align: left;
     letter-spacing: 2.88px;
-    color: #110729;
-    font-weight: 900;
+    color: #575758;
 }
 
 h6.subtitles-sua-empresa {
-    text-align: center;
-    font-size: 24px;
     letter-spacing: -0.48px;
-    color: #4B5981;
+    color: #575758;
+    font-size: 20px;
+    font-family: "Poppins-SemiBold";
 }
 
 p.description-sua-empresa {
     text-align: left;
-    font-size: 16px;
     letter-spacing: 0;
     color: #495057;
 }
@@ -1475,7 +1505,7 @@ p.description-sua-empresa {
     margin: 40px 0px;
     background: #FAFAFA;
     padding: 100px 75px;
-    text-align: center;
+    text-align: left;
 }
 
 .bg-consultoria {
@@ -1499,7 +1529,29 @@ p.description-sua-empresa {
 }
 
 #bloco-pesquisa, #bloco-consultoria, #bloco-eventos, #bloco-relatorios, #bloco-csc {
-  margin: 50px 0px;
+    margin: 0px 0px 50px;
+}
+
+@media (max-width: 690px) {
+    input#txtBusca {
+    margin: 20px 0px;
+    }
+    
+    #depoimentos {
+    padding: 50px 0px 20px;
+    }
+    #information {
+    padding: 50px 0px 30px;
+    }
+    
+    footer {
+    margin: 0px 0px;
+    padding: 20px 0px;
+    }
+    
+    #footer-two {
+    margin: 0;
+    }
 }
 
 /* ======== CSS PAGE CONSULTORIA ========= */
@@ -1512,8 +1564,6 @@ p.description-sua-empresa {
 }
 
 #page-consultoria .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
 }
 
@@ -1534,39 +1584,53 @@ p.description-sua-empresa {
 }
 
 .content-consultoria h1 {
-    font-size: 36px;
-    color: #000;
+    color: #575758;
     margin: 150px 100px 0;
-    font-weight: bold;
-    font-family: "Poppins-Bold";
-}
-
-.content-consultoria p {
-    padding: 10px 100px 0;
-}
+  }
 
 .content-consultoria {
-    background: #FAFAFA;
-    text-align: center;
+    padding: 10px 100px 0;
+    align-self: center;
+}
+
+.content-consultoria a {
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 
 #page-consultoria .btn-events {
     margin: 30px 100px 20px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    color: #fff;
 }
 
-@media screen and (max-width: 690px) {
+#page-consultoria .btn-events:hover {
+  color: #444;
+}
+
+@media (max-width: 690px) {
     #solucoes-ieg h6 {
-      padding: 20px;
-      font-size: 18px;
-    }
-    .title h1 {
-      font-size: 33px;
+      padding: 0 20px;
     }
 
     .content-consultoria h1 {
     margin: 0;
     padding: 30px 30px 0px;
-    font-size: 26px;
+    }
+
+    .content-consultoria {
+    margin-top: 15px;
+    border: 1px solid #dedede;
+    }
+
+    #pesquisas-csc .in-bloco-csc {
+    border-radius: 0 !important;
+   }
+
+    #pesquisas-csc .bloco-csc img {
+    width: 100% !important;
     }
 
     #page-consultoria .btn-events {
@@ -1589,7 +1653,7 @@ p.description-sua-empresa {
     }
 
     #solucoes-ieg {
-    margin: 70px 0 20px;
+    margin: 70px 0 0px;
   }
 }
 
@@ -1609,29 +1673,37 @@ i.fa.fa-comment.icon.message {
 
 #page-pesquisas .content-consultoria p, #page-pesquisas .content-consultoria .btn {
     margin: 20px 0px 10px;
+    font-size: 18px;
 }
 
 #page-pesquisas .content-consultoria p {
-    text-align: center;
-    font-size: 16px;
+    text-align: left;
     letter-spacing: 0.16px;
-    color: #000000;
+    color: #575758;
+}
+
+.content-consultoria .btn-events {
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
 }
 
 #page-pesquisas .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
 }
 
 @media screen and (max-width: 690px) {
-    #page-pesquisas .content-consultoria p {
-      margin: 30px 30px 10px;
-    }
-
     #page-pesquisas .content-consultoria .btn {
       margin: 10px 30px 40px;
     }
+    
+    .content-consultoria p {
+    padding: 10px 30px 0;
+    }
+
+    .content-consultoria .btn-events {
+    margin-left: 30px !important;
+  }
 }
 
 /******* PAGE TREINAMENTO INTERNA *******/
@@ -1644,8 +1716,6 @@ i.fa.fa-comment.icon.message {
   }
 
   #page-treinamento-interna .b-home-slides h1, #page-pesquisa-interna .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
   }
 
@@ -1661,21 +1731,17 @@ i.fa.fa-comment.icon.message {
 
   #our-numbers {
     background: #F8F9FB;
-    padding: 100px 0px;
+    padding: 50px 0px;
   }
 
   .numbers-title h1 {
-    font-size: 38px;
-    color: #000000;
-    font-weight: bold;
+    color: #575758;
   }
 
   .numbers-title h6 {
     text-align: left;
-    font-size: 20px;
     letter-spacing: 0;
     color: #172541;
-    font-weight: 900;
     margin: 0 0 10px;
     font-family: "Poppins-Bold";
     margin: 30px 0px;
@@ -1688,24 +1754,17 @@ i.fa.fa-comment.icon.message {
   }
 
   .title p {
-    font-size: 12px;
     color: #737373;
     padding: 0px 100px;
   }
 
   #page-treinamento-interna .title-parceiros p, #page-pesquisa-interna .title-parceiros p, #page-consultoria-interna .title-parceiros p {
     text-align: center;
-    font-size: 12px;
     letter-spacing: 0;
-    color: #000000;
     padding: 0px 250px;
   }
 
 @media screen and (max-width: 719px) {
-
-    #page-treinamento-interna .b-home-slides h1, #page-pesquisa-interna .b-home-slides h1 {
-    font-size: 30px !important;
-	}
 
     #page-treinamento-interna .pesquisa {
     padding: 50px 30px;
@@ -1726,7 +1785,8 @@ i.fa.fa-comment.icon.message {
 	}
 
     #page-pra-sua-empresa .pesquisa, #page-pra-sua-empresa .consultoria {
-    padding: 100px 30px;
+    padding: 50px 20px;
+    margin: -55px 30px 130px 10px;
 	}
 }
 
@@ -1756,13 +1816,12 @@ i.fa.fa-comment.icon.message {
 .box-date {
     border: 1px solid #FFFFFF;
     width: 110px;
-    height: 95px;
+    height: 110px;
     margin: 30px 10px 0px;
 }
 
 .title-countdown {
     text-align: center;
-    font-size: 40px;
     letter-spacing: 0;
     color: #FFFFFF;
     margin-top: 50px;
@@ -1773,19 +1832,17 @@ i.fa.fa-comment.icon.message {
 }
 
 .date-number {
-    font-size: 40px;
     margin-top: 10px;
+    font-size: 40px;
 }
 
 .current-timer {
-    font-family: "Poppins";
-    font-size: 11px;
-    margin-top: -20px;
-    }
+    margin-top: -20;
+    font-size: 12px;
+}
 
 .btn-countdown {
     width: 240px;
-    height: 60px;
     border: 2px solid #FFFFFF;
     border-radius: 0px;
     color: #fff;
@@ -1830,15 +1887,12 @@ i.fa.fa-comment.icon.message {
     text-align: left;
 }
 
-#page-evtr-interna .title h1 {
-    font-family: "Poppins-Semibold";
-    color: #000;
-    font-size: 38px;
+#page-evtr-interna .title h2 {
+    color: #575758;
     margin: 70px 70px 20px;
 }
 
 #page-evtr-interna td.title {
-    font-size: 30px;
     letter-spacing: 0;
     color: #FFFFFF;
 }
@@ -1856,37 +1910,43 @@ i.fa.fa-comment.icon.message {
 
 #page-evtr-interna .bloco-solucoes h5 {
     letter-spacing: 2px;
-    font-family: "Poppins-Bold";
-    font-size: 20px;
 }
 
 .btn-green {
-    width: 250px;
-    height: 50px;
-    background: #27AE60 0% 0% no-repeat padding-box;
+    background: #12378B 0% 0% no-repeat padding-box;
     border-radius: 0px;
     color: #fff;
+    font-family: "Poppins-Bold";
 }
 
 .btn-yellow {
     background: #FFC600 0% 0% no-repeat padding-box;
     border-radius: 0px;
     color: #fff;
-    padding: 20px 50px;
+    padding: 0px 30px;
+    width: auto;
+    height: 50px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    border-radius: 4px;
 }
 
 .btn-green:hover {
-    width: 250px;
-    height: 50px;
-    background: #12793d 0% 0% no-repeat padding-box;
-    border-radius: 0px;
+    background: #12378Bd9;
     color: #fff;
+}
+
+.background-black .btn-green {
+    float: right;
 }
 
 .btn-yellow:hover {
     background: #cea001 0% 0% no-repeat padding-box;
-    border-radius: 0px;
     color: #fff;
+}
+
+.background-black .btn-yellow {
+    float: left;
 }
 
 #courses {
@@ -1921,7 +1981,6 @@ i.fa.fa-comment.icon.message {
 
 .title-patrocinadores {
     text-align: center;
-    font-size: 25px;
     letter-spacing: 2px;
     color: #110729;
     margin: 0;
@@ -1937,7 +1996,7 @@ i.fa.fa-comment.icon.message {
     text-align: center;
     font: Bold 36px/59px Poppins;
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
     text-transform: uppercase;
 }
 
@@ -1953,7 +2012,7 @@ i.fa.fa-comment.icon.message {
     text-align: center;
     font: Bold 36px/59px Poppins;
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
     text-transform: uppercase;
 }
 
@@ -1998,14 +2057,15 @@ i.fa.fa-comment.icon.message {
 
 #photo-event .btn-blue {
     margin-top: 40px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
 }
 
 #photo-event h1 {
-    font-size: 36px;
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
     text-transform: uppercase;
-    font-family: "Poppins-Bold";
     text-align: center;
     margin-bottom: 50px;
 }
@@ -2020,10 +2080,6 @@ i.fa.fa-comment.icon.message {
     color: #f8f8f8;
     padding: 30px 0px 10px;
     text-transform: uppercase;
-}
-
-.txt-edit h1 {
-    font-size: 35px;
 }
 
 #prev-event {
@@ -2041,6 +2097,9 @@ i.fa.fa-comment.icon.message {
 
 .btn-edition {
     margin-top: 65px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
 }
 
 .logo-participantes{ 
@@ -2060,8 +2119,7 @@ i.fa.fa-comment.icon.message {
     padding: 0;
   }
 
-  #solucoes-do-ieg .title h1 {
-    font-size: 38px;
+  #solucoes-do-ieg .title h2 {
     margin: 50px 0px;
   }
 
@@ -2069,8 +2127,7 @@ i.fa.fa-comment.icon.message {
     padding: 50px 20px;
   }
 
-  #page-evtr-interna .title h1 {
-    font-size: 25px;
+  #page-evtr-interna .title h2 {
     margin: 20px 0 0;
   }
 
@@ -2118,7 +2175,6 @@ i.fa.fa-comment.icon.message {
   }
 
   .txt-edit h1 {
-    font-size: 28px;
     padding: 0px 40px;
   }
 
@@ -2162,23 +2218,13 @@ i.fa.fa-comment.icon.message {
     margin: 0 90px 0 0;
 }
 
-.txt-contato h1 {
-    font-family: "Poppins-Bold", sans-serif;
-}
-
 .txt-contato p {
-    font-size: 20px;
     line-height: 1.4;
-}
-
-.txt-contato strong {
-    font-family: "Poppins-Bold";
 }
 
 .btn-blue {
     background: #12378B;
     color: #fff;
-    font-size: 17px;
     padding: 20px 60px;
     margin-top: 15px;
   }
@@ -2187,8 +2233,6 @@ i.fa.fa-comment.icon.message {
     background: #cac6c6;
     box-shadow: 0 4px 11px #d2d2d2;
     color: #12378B;
-    font-size: 17px;
-    padding: 20px 60px;
     margin-top: 15px;
   }
 
@@ -2197,14 +2241,11 @@ i.fa.fa-comment.icon.message {
 }
 
 #info-contacts h6 {
-    font-size: 20px;
     letter-spacing: 0;
     color: #172541;
-    font-family: "Poppins-Bold";
 }
 
 #info-contacts p {
-    font-size: 16px;
     letter-spacing: 0;
     color: #495057;
 }
@@ -2231,9 +2272,57 @@ i.fa.fa-comment.icon.message {
     color: #5C5C5C;
 }
 
-@media screen only (max-width: 719px) {
+@media (max-width: 719px) {
   .padding-left-contact {
+    margin: 0 0 20px;
+  }
+
+  .txt-contato {
+    padding: 40px !important;
+  }
+
+  #banner-contato {
+    margin: 30px 0px;
+  }
+
+  #our-numbers .col {
+    flex: 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  #empresas-parceiras {
+    padding: 30px 0;
+  }
+
+  #our-numbers {
+    padding: 30px 0px;
+  }
+
+  #pq-estudar {
+    margin: 30px 0 0;
+  }
+
+  #bloco-pesquisa, #bloco-consultoria, #bloco-eventos, #bloco-relatorios, #bloco-csc {
     margin: 0;
+  }
+
+  #form-trabalhe-conosco {
+    margin: 0 !important;
+  }
+
+  #page-trabalhe-conosco .contact {
+    margin: 0px 0px 30px !important;
+  }
+
+  #valores-tc {
+    margin-top: -240px !important;
+  }
+
+  .firs-txt {
+    text-align: center;
+    padding: 20px 30px 0 !important;
   }
 }
 
@@ -2249,8 +2338,6 @@ i.fa.fa-comment.icon.message {
   }
 
   #page-trabalhe-conosco .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     padding-top: 75px;
 }
 
@@ -2298,15 +2385,13 @@ i.fa.fa-comment.icon.message {
 } 
 
 #relatorios .title h3 {
-    font: Bold 36px/59px Poppins-Bold;
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
 }
 
 #relatorios .title h6 {
-    font-size: 16px;
     letter-spacing: 0.16px;
-    color: #000000;
+    color: #575758;
     margin-top: -20px;
   }
 
@@ -2340,18 +2425,15 @@ i.fa.fa-comment.icon.message {
 
 .objetivo .title h6, .importancia .title h6 {
     text-align: left;
-    font-size: 14px;
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
 }
 
 .objetivo .title h3, .importancia .title h3 {
     text-align: right;
-    font-size: 25px;
     letter-spacing: 2px;
     color: #110729;
     padding-right: 60px;
-    font-family:  "Poppins-Bold";
 }
 
 /* ============== RESPONSIVIDADE ============= */
@@ -2381,10 +2463,6 @@ i.fa.fa-comment.icon.message {
 
   .objetivo .title h6, .importancia .title h6 {
     text-align: center;
-  }
-
-  #page-pesquisa-interna .b-home-slides h1 {
-    font-size: 39px !important;
   }
 
   #page-consultoria-interna .bloco-solucoes, #page-pesquisa-interna .bloco-solucoes {
@@ -2421,6 +2499,12 @@ i.fa.fa-comment.icon.message {
     background: url(img/pagina-de-cursos.jpg) no-repeat 50% 45%;
 }
 
+@media (max-width: 690px) {
+  #page-pagina-do-curso .bg-treinamento-interno {
+    background: none;
+  }
+}
+
 #metodologia {
     background: #F8F9FB 0% 0% no-repeat padding-box;
     padding: 50px 0px;
@@ -2438,22 +2522,18 @@ i.fa.fa-comment.icon.message {
 
 .price {
     text-align: left;
-    font-size: 40px;
     letter-spacing: 0;
     color: #110729;
   }
  
 #metodologia .price {
-    font-size: 22px;
-    font-weight: 900;
     margin: 5px 20px;
 }
 
 #page-pagina-do-curso .cursos .text-bloco {
   text-align: left;
-  font-size: 14px;
   letter-spacing: 0;
-  color: #000000;
+  color: #575758;
   padding: 0 20px;
 }
 
@@ -2464,7 +2544,6 @@ i.fa.fa-comment.icon.message {
 .parcel-price {
   margin: -10px 20px 10px;
   text-align: left;
-  font-size: 16px;
   letter-spacing: 0;
   color: #110729;
 }
@@ -2472,7 +2551,6 @@ i.fa.fa-comment.icon.message {
 #page-pagina-do-curso .cursos .btn-blue {
     background: #12378B;
     color: #fff;
-    font-size: 17px;
     padding: 15px 15px;
     margin: 10px 20px;
 }
@@ -2489,24 +2567,21 @@ i.fa.fa-comment.icon.message {
 
 #metodologia .title p {
     text-align: left;
-    font-size: 12px;
     letter-spacing: 0;
     color: #737373;
     padding: 0;
     margin-bottom: 40px;
 }
 
-#metodologia .title h1 {
-    font-size: 38px;
+#metodologia .title h2 {
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
     font-weight: 900;
     text-align: left;
 }
 
 #metodologia .title h3 {
     text-align: left;
-    font-size: 20px;
     letter-spacing: 0;
     color: #172541;
     font-weight: 900;
@@ -2514,7 +2589,6 @@ i.fa.fa-comment.icon.message {
 
 #metodologia .title h6 {
     text-align: left;
-    font-size: 16px;
     letter-spacing: 0;
     color: #495057;
     margin-bottom: 20px 0px;
@@ -2532,7 +2606,7 @@ i.fa.fa-comment.icon.message {
   padding: 80px 0px;
 }
 
-#materias .title h1 {
+#materias .title h2 {
     text-align: left;
 }
 
@@ -2564,13 +2638,11 @@ i.fa.fa-comment.icon.message {
 }
 
 .teacher h3 {
-    font-size: 24px;
     color: #21223F;
     margin: 10px 0 10px 0;
 }
 
 .teacher h6 {
-    font-size: 12px;
     color: #333457;
     margin: 0px 0 5px 0;
 }
@@ -2594,9 +2666,7 @@ i.fa.fa-comment.icon.message {
 }
 
 #perguntas-frequentes .btn-link {
-    font-size: 20px;
     color: #172541;
-    font-weight: 900;
     text-align: left;
 }
 
@@ -2610,18 +2680,17 @@ i.fa.fa-comment.icon.message {
     padding: 100px 0px;
 }
 
-#perguntas-frequentes .title h1 {
+#perguntas-frequentes .title h2 {
     text-align: left;
     margin-bottom: 40px;
 }
 
 #perguntas-frequentes h6 {
-    font-size: 20px;
     color: #FFFFFF;
 }
 
 #perguntas-frequentes .txt-contato {
-    padding: 40px 65px;
+    padding: 50px 40px;
     background: #12378B;
     color: #fff;
     text-align: center;
@@ -2633,6 +2702,8 @@ i.fa.fa-comment.icon.message {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: 0px;
     padding: 15px 17px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
 }
 
 .fa-angle-down {
@@ -2715,8 +2786,6 @@ i.fa.fa-comment.icon.message {
   }
 
   #page-csc-modelo .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
   }
 
@@ -2736,26 +2805,21 @@ i.fa.fa-comment.icon.message {
 
 #info-csc h4 {
     text-align: left;
-    font-size: 29px;
     letter-spacing: 0;
-    color: #000000;
-    font-family: "Poppins-Bold";
+    color: #575758;
 }
 
 #info-csc p {
-    font-size: 16px;
     letter-spacing: 0;
-    color: #000000;
+    color: #575758;
     line-height: 1.3;
     margin: 5px 0;
 }
 
 #info-csc span {
     text-align: left;
-    font-size: 15px;
     letter-spacing: 0;
     opacity: 0.61;
-    font-family: "Poppins-Bold";
 }
 
 #info-csc {
@@ -2819,14 +2883,11 @@ i.fa.fa-comment.icon.message {
 }
 
 .bloco-esquerda h4, .bloco-direita h4 {
-    font-size: 21px;
-    font-family: "Poppins-Semibold";
-    color: #000;
+    color: #575758;
 }
 
 .bloco-esquerda p, .bloco-direita p {
-    font-size: 14px;
-    color: #000;
+    color: #575758;
 }
 
 .bloco-historia {
@@ -2843,15 +2904,12 @@ i.fa.fa-comment.icon.message {
 }
 
 .bloco-historia h2 {
-  font-size: 38px;
-  font-family: "Poppins-Semibold";
   letter-spacing: 0;
   color: #000306;
   text-align: center;
 }
 
 .bloco-historia p {
-  font-size: 14px;
   letter-spacing: 0;
   color: #495057;
   text-align: center;
@@ -2868,6 +2926,20 @@ i.fa.fa-comment.icon.message {
     padding: 50px 0 80px;
 }
 
+@media (max-width: 690px) {
+  #nossa-historia {
+    padding: 0 !important;
+  }
+
+  #escola-de-negocios {
+    padding: 20px 0 20px !important;
+  }
+  
+  #consultoria-about {
+    padding: 0 0 30px !important;
+  }
+}
+
 .bloco-escola-de-negocios {
     background: #12378BE6 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -2882,18 +2954,10 @@ i.fa.fa-comment.icon.message {
 
 .bloco-escola-de-negocios h5 {
     color: #fff;
-    font-family: "Poppins-SemiBold";
-    font-size: 18px;
 }
 
 .bloco-escola-de-negocios p {
-    font-size: 14px;
     line-height: 1.7;
-}
-
-.bloco-escola-de-negocios h2 {
-    font-size: 38px;
-    font-family: "Poppins-SemiBold";
 }
 
 #escola-de-negocios {
@@ -2901,7 +2965,7 @@ i.fa.fa-comment.icon.message {
 }
 
 .bloco-pesquisa-about {
-    background: #000000CC 0% 0% no-repeat padding-box;
+    background: #12378BE6 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 40px;
     color: #fff;
@@ -2982,8 +3046,6 @@ i.fa.fa-comment.icon.message {
 .bloco-engenharia-de-gestao h6 {
     border-top: 1px solid #fff;
     padding-top: 20px;
-    font-size: 20px;
-    font-family: "Poppins-SemiBold";
     margin-bottom: 10px;
 }
 
@@ -2998,7 +3060,6 @@ i.fa.fa-comment.icon.message {
 }
 
 .bloco-engenharia-de-gestao p {
-    font-size: 17px;
     line-height: 1.3;
     padding: 0 20px;
     margin-bottom: 0;
@@ -3074,8 +3135,6 @@ i.fa.fa-comment.icon.message {
 }
 
 #page-relatorios-e-publicacoes .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
 }
 
@@ -3136,20 +3195,10 @@ i.fa.fa-comment.icon.message {
   }
 
   .txt-engenharia-de-gestao h3 {
-    font-size: 17px;
     margin-bottom: 5px;
   }
 
-  .txt-engenharia-de-gestao p {
-    font-size: 12px;
-  }
-
-  .bloco-engenharia-de-gestao h6 {
-    font-size: 13px;
-  }
-
   .bloco-engenharia-de-gestao p {
-    font-size: 15px;
     padding: 0;
   }
 
@@ -3185,11 +3234,9 @@ i.fa.fa-comment.icon.message {
 }
 /* ====== PAGE PESQUISA INTERNA ====== */
 
-#estudos-realizados h1, #pesquisa-resultados h1 {
+#estudos-realizados h2, #pesquisa-resultados h2 {
     text-align: center;
-    font-family: "Poppins-SemiBold";
-    color: #000;
-    margin-bottom: 30px;
+    color: #575758;
 }
 
 #estudos-realizados {
@@ -3198,42 +3245,45 @@ i.fa.fa-comment.icon.message {
 }
 
 .btn-black-radiusl {
-    border-radius: 6px 0px 0px 6px;
-    border: 2px solid #000000;
+    border-radius: 6px 0px 0px 6px !important;
+    border: 1px solid #12378B;
 	margin-right: -2px;
-	width: 245px;
-	height: 76px;
+	width: auto;
+    font-family: "Poppins-Bold";
 	text-transform: uppercase;
-	background: #fff;
+  color: #12378B;
+  height: auto !important;
 }
 
 .btn-black-radiusr {
-	border: 2px solid #000000;
-	border-radius: 0px 6px 6px 0px;
+	border: 1px solid #12378B;
+	border-radius: 0px 6px 6px 0px !important;
 	opacity: 1;
 	margin: 0;
-	width: 245px;
-	height: 76px;
+	width: auto;
+    font-family: "Poppins-Bold";
 	text-transform: uppercase;
-	background: #fff;
+  color: #12378B;
+  height: auto !important;
 }
 
 .btn-black {
-	border: 2px solid #000000;
-	border-radius: 0;
+	border: 1px solid #12378B;
+	border-radius: 0 !important;
 	opacity: 1;
 	margin-right: -2px;
-	width: 245px;
-	height: 76px;
+	width: auto;
+    font-family: "Poppins-Bold";
 	text-transform: uppercase;
-	background: #fff;
+  color: #12378B;
+  height: auto !important;
 }
 
 .btn-black:focus, .btn-black-radiusl:focus, .btn-black-radiusr:focus, .btn-black:hover, .btn-black-radiusl:hover, .btn-black-radiusr:hover, .btn-black:active, .btn-black-radiusl:active, .btn-black-radiusr:active {
     outline: 0;
     box-shadow: none;
-    background: #000;
     color: #fff;
+    background: #12378B;
 }
 
 .buttons-pesquisa-interna {
@@ -3245,12 +3295,11 @@ i.fa.fa-comment.icon.message {
 #page-pesquisa-interna #estudos-realizados .card-body {
     width: 975px !important;
     height: 236px;
-    background: #000000 0% 0% no-repeat padding-box;
+    background: #12378B;
     border-radius: 6px;
     margin-top: 20px;
     color: #fff;
     text-align: center;
-    font-size: 15px;
     letter-spacing: 0.24px;
     padding: 50px;
     display: flex;
@@ -3266,6 +3315,16 @@ i.fa.fa-comment.icon.message {
     padding: 70px 0px;
 }
 
+.card-body {
+    border-left: 1px solid #172541;
+    border-right: 1px solid #172541;
+    border-bottom: 1px solid #172541;
+}
+
+.card {
+    border: 0;
+}
+
 #pesquisa-resultados .card {
     border: none;
     width: 975px !important;
@@ -3273,7 +3332,7 @@ i.fa.fa-comment.icon.message {
 }
 
 .rd-relatorios, .rd-videos {
-    background: #000000 0% 0% no-repeat padding-box;
+    background: #12378B;
     border-radius: 6px;
     overflow: hidden;
     margin: 0 30px;
@@ -3285,7 +3344,7 @@ i.fa.fa-comment.icon.message {
 
 .txt-bot {
     background: #fff;
-    color: #000;
+    color: #575758;
     margin-top: 35px;
     padding: 10px;
 }
@@ -3299,62 +3358,57 @@ i.fa.fa-comment.icon.message {
 
 #apresentacao .objetivo .title h3 {
     text-align: left;
-    font-size: 42px;
     letter-spacing: 2px;
     color: #110729;
     padding-right: 60px;
     font-weight: 900;
-    font-family: "Poppins-SemiBold";
     margin-top: 50px;
 }
 
 #capitulos {
-    background: #1F1F1F 0% 0% no-repeat padding-box;
+    background: #12378B;
     color: #fff;
     text-align: center;
     padding: 70px 0px;
 }
 
 #capitulos .btn-black-radiusl {
-    border-radius: 6px 0px 0px 6px;
-    border: 2px solid #fff;
+    border-radius: 6px 0px 0px 6px !important;
+    border: 1px solid #fff;
   margin-right: -2px;
-  width: 245px;
-  height: 76px;
   text-transform: uppercase;
-  background: #1F1F1F;
+  background: transparent;
   color: #fff;
+  height: auto;
 }
 
 #capitulos .btn-black-radiusr {
-  border: 2px solid #fff;
-  border-radius: 0px 6px 6px 0px;
+  border: 1px solid #fff;
+  border-radius: 0px 6px 6px 0px !important;
   opacity: 1;
   margin: 0;
-  width: 245px;
-  height: 76px;
   text-transform: uppercase;
-  background: #1F1F1F;
+  background: transparent;
   color: #fff;
+  height: auto;
 }
 
 #capitulos .btn-black {
-  border: 2px solid #fff;
-  border-radius: 0;
+  border: 1px solid #fff;
+  border-radius: 0 !important;
   opacity: 1;
   margin-right: -2px;
-  width: 245px;
-  height: 76px;
   text-transform: uppercase;
-  background: #1F1F1F;
+  background: transparent;
   color: #fff;
+  height: auto;
 }
 
 #capitulos .btn-black:focus, #capitulos .btn-black-radiusl:focus, #capitulos .btn-black-radiusr:focus, #capitulos .btn-black:hover, #capitulos .btn-black-radiusl:hover, #capitulos .btn-black-radiusr:hover, #capitulos .btn-black:active, #capitulos .btn-black-radiusl:active, #capitulos .btn-black-radiusr:active {
     outline: 0;
     box-shadow: none;
     background: #fff;
-    color: #000;
+    color: #12378B;
 }
 
 #capitulos .card-body {
@@ -3365,7 +3419,7 @@ i.fa.fa-comment.icon.message {
     width: 974px;
 }
 
-#capitulos h1 {
+#capitulos h2 {
     margin-bottom: 50px;
 }
 
@@ -3382,8 +3436,6 @@ i.fa.fa-comment.icon.message {
 
 #page-relatorios-e-publicacoes-interna .bloco-solucoes h5 {
     letter-spacing: 2px;
-    font-family: "Poppins-Bold";
-    font-size: 20px;
 }
 
 #page-relatorios-e-publicacoes-interna .b-home-slides {
@@ -3400,27 +3452,25 @@ i.fa.fa-comment.icon.message {
 }
 
 #page-csc .b-home-slides h1 {
-    font-size: 52px;
-    font-family: "Poppins-Bold";
     margin-top: 70px;
 }
 
 #page-csc .background-black {
     color: #fff;
-    background: #000;
+    background: #12378B;
     margin: 0;
     border-radius: 0px 0px 10px 10px !important;
 
-}
-
-#page-csc .background-black h3 {
-    font-family: "Poppins-Bold";
 }
 
 .bloco-csc {
     padding: 0;
     margin: 25px;
     width: 33%;
+}
+
+.bloco-csc h4 {
+    font-family: "Poppins-SemiBold";
 }
 
 .bloco-csc img {
@@ -3430,6 +3480,12 @@ i.fa.fa-comment.icon.message {
 .bloco-csc .row {
   margin: 0;
   padding: 0;
+}
+
+.list-csc b {
+    font-family: "Poppins-Bold";
+    color: #575758;
+    font-size: 20px;
 }
 
 .in-bloco-csc {
@@ -3460,28 +3516,21 @@ i.fa.fa-comment.icon.message {
 
 #pesquisas-csc .bloco-csc h3 {
     text-align: center;
-    font-size: 30px;
     letter-spacing: 0.48px;
     color: #0000008f;
-}
-
-#pesquisas-csc .bloco-csc h3 {
-    text-align: center;
-    font-size: 30px;
-    letter-spacing: 0.48px;
-    color: #0000008f;
-    padding: 0px 50px;
 }
 
 #pesquisas-csc .btn-black, #consultoria-csc .btn-black {
-  background: #000;
+  background: #12378B;
   color: #fff;
   width: 326px;
-  border-radius: 6px;
+  border-radius: 4px;
+  padding: 10px 0;
+  border: 0;
 }
 
 #pesquisas-csc .btn-black:hover, #consultoria-csc .btn-black:hover  {
-  background: #000000d9;
+  background: #12378Bd9;
   color: #fff;
 }
 
@@ -3490,36 +3539,28 @@ i.fa.fa-comment.icon.message {
 }
 
 #rp-csc {
-  background: #000000CC 0% 0% no-repeat padding-box;
+  background: #12378B;
   color: #fff;
   padding: 90px 0;
 }
 
 #rp-csc h4 {
-  font-size: 22px;
-  font-family: "Poppins-Bold";
   margin: 0px 0 0;
 }
 
 #rp-csc p {
-  font-size: 17px;
   margin: 0px 0 30px;
 }
 
 #rp-csc h1 {
- font-size: 48px;
- font-family: "Poppins-Bold";
  margin-bottom: 50px;
 }
 
 #rp-csc .btn-white, #treinamentos-csc .btn-white {
   width: 326px;
-  height: 76px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 6px;
   letter-spacing: 0.29px;
-  font-family: "Poppins-Bold";
-  font-size: 18px;
   margin-top: 50px;
 }
 
@@ -3528,31 +3569,27 @@ i.fa.fa-comment.icon.message {
 }
 
 #consultoria-csc .btn-black {
-  background: #000;
+  background: #12378B;
   color: #fff;
   width: 100%;
   height: 60px;
   border-radius: 6px;
-  font-size: 18px;
   margin-top: 22px;
 }
 
 #consultoria-csc .btn-black:hover  {
-  background: #000000d9;
+  background: #12378Bd9;
   color: #fff;
 }
 
 .consult-csc-txt h6 {
   text-align: left;
-  font-size: 21.6px;
-  font-family: "Poppins-Bold";
-  color: #000000;
+  color: #575758;
 }
 
 .consult-csc-txt p {
   text-align: left;
-  font-size: 16px;
-  color: #000000;
+  color: #575758;
 }
 
 .consult-csc-txt {
@@ -3563,10 +3600,8 @@ i.fa.fa-comment.icon.message {
 }
 
 #consultoria-csc h1 {
-  font-size: 48px;
-  font-family: "Poppins-SemiBold";
   margin-bottom: 50px;
-  color: #000;
+  color: #575758;
 }
 
 #treinamentos-csc {
@@ -3579,8 +3614,6 @@ i.fa.fa-comment.icon.message {
 }
 
 #treinamentos-csc h1 {
-    font-family: "Poppins-SemiBold";
-    font-size: 48px;
     margin-bottom: 20px;
 }
 
@@ -3591,7 +3624,6 @@ i.fa.fa-comment.icon.message {
 #treinamentos-csc p {
     margin-bottom: 10px;
     padding: 25px 150px 0;
-    font-size: 15px;
 }
 
 #grupos-csc {
@@ -3599,21 +3631,18 @@ i.fa.fa-comment.icon.message {
 }
 
 #grupos-csc .title h6 {
-  font-size: 14px;
-  color: #000;
+  color: #575758;
   text-align: center;
   padding: 20px 100px;
 }
 
 #grupos-csc .title h3 {
-  color: #000;
-  font-size: 25px;
+  color: #575758;
   letter-spacing: 2px;
-  font-family: "Poppins-Semibold"
 }
 
 .img-logo-csc {
-    padding: 100px 30px;
+    padding: 0px 30px;
     display: flex;
     place-content: center;
 }
@@ -3627,25 +3656,25 @@ i.fa.fa-comment.icon.message {
 
 .bloco-cadastrar-csc {
     border: 1px solid #707070;
-    margin: 35px;
+    margin: 0 30px 25px;
 }
 
 .btn-blac-nopadding {
     margin: 0;
-    background: #000;
-    border-radius: 0;
+    background: #12378B;
+    border-radius: 0 !important;
     color: #fff;
-    width: 100%;
-    height: 62px;
+    width: 100% !important;
+    height: 62px !important;
 }
 
 .btn-white-nopadding {
     margin: 0;
     background: #fff;
-    border-radius: 0;
-    color: #000;
-    width: 100%;
-    height: 62px;
+    border-radius: 0 !important;
+    color: #575758;
+    width: 100% !important;
+    height: 62px !important;
 }
 
 @media screen and (max-width: 630px) {
@@ -3672,24 +3701,12 @@ i.fa.fa-comment.icon.message {
     padding: 0;
   }
 
-  #treinamentos-csc h1 {
-    font-size: 33px;
-  }
-
   #treinamentos-csc img {
     width: 290px;
   }
 
   #grupos-csc .title h6 {
-    padding: 20px;
-  }
-
-  #page-csc .b-home-slides h1 {
-    font-size: 33px;
-  }
-
-  #page-csc-modelo .b-home-slides h1 {
-    font-size: 33px;
+    padding: 0 15px;
   }
 
   .box-detals-csc {
@@ -3726,8 +3743,16 @@ i.fa.fa-comment.icon.message {
 
   #apresentacao .objetivo .title h3 {
     text-align: center;
-    font-size: 34px;
     padding-right: 0;
+  }
+
+  .bloco-cadastrar-csc {
+    border: 1px solid #707070;
+    margin: 15px;
+  }
+
+  #consultoria-csc {
+    padding: 30px 0px;
   }
 }
 
@@ -3785,11 +3810,38 @@ i.fa.fa-comment.icon.message {
     display: flex;
 }
 
+@media (max-width: 690px) {
+  .cupom_descont {
+    max-width: 100%;
+    float: none;
+  }
+
+  .att_cart {
+    max-width: 100%;
+    display: block;
+    float: none;
+  }
+
+  td.product-remove, td.product-thumbnail, td.product-name, td.product-price, td.product-quantity, td.product-subtotal {
+    width: 100%;
+  }
+}
+
 #cart-products .buy {
     width: 165px;
     line-height: 30px;
-    height: 30px;
-    }
+    height: 28px;
+    background: #FBBB0D;
+    padding: 0px;
+
+}
+
+#cart-products .buy:hover {
+    width: 165px;
+    line-height: 30px;
+    height: 28px;
+    background: #12378B;
+}
 
 #cart-products input#coupon_code {
     border: 1px solid #dbdbdb;
@@ -3830,16 +3882,38 @@ th.align-left {
     margin: 15px 0;
 }
 
-p#billing_first_name_field, p#billing_last_name_field, p#billing_company_field, p#billing_country_field, p#billing_postcode_field, p#billing_address_1_field, p#billing_address_2_field, p#billing_city_field, p#billing_state_field, p#billing_phone_field, p#billing_email_field {
+p#billing_first_name_field, p#billing_last_name_field, p#billing_company_field, p#billing_country_field, p#billing_postcode_field, p#billing_address_1_field, p#billing_city_field, p#billing_state_field, p#billing_phone_field, p#billing_email_field {
     width: 50%!important;
-    padding: 0 20px;
+    padding: 0 5px;
     max-width: 50%;
     flex: 0 0 50%;
     display: inline-flex;
 }
 
+span.select2-selection.select2-selection--single {
+    width: auto;
+    height: 40px;
+    margin-top: -3px;
+    display: flex;
+    place-items: center;
+    border: 0px solid #d7d7d7;
+    box-shadow: 0 0 3px #acacac;
+    padding: 7px;
+}
+
+#primary label {
+    width: auto;
+}
+
+textarea#order_comments {
+    height: 150px !important;
+    border: 0px solid #d7d7d7;
+    box-shadow: 0 0 3px #acacac;
+    padding: 7px;
+}
+
 p#billing_address_2_field {
-    display: none;
+    display: none !important;
 }
 
 select#billing_country {
@@ -3853,31 +3927,48 @@ input, select, textarea {
 }
 
 label {
-    font-size: 12px;
-    color: #000000;
+    font-size: 16px;
+    color: #575758;
 }
 
 select, textarea {
-    font-size: 15px;
+    font-size: 16px;
     color: #797979;
 }
 
-div#primary {
-    padding: 80px;
+@media (max-width: 690px) {
+    #primary {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+    
+    #cart-products .buy {
+    width: auto;
+    padding: 0px 10px;
+    }
+
+    span.select2-selection.select2-selection--single {
+    width: auto;
+    }
+
+    #primary .woocommerce .col2-set, #primary .woocommerce-page .col2-set {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  p#billing_first_name_field, p#billing_last_name_field, p#billing_company_field, p#billing_country_field, p#billing_postcode_field, p#billing_address_1_field, p#billing_city_field, p#billing_state_field, p#billing_phone_field, p#billing_email_field {
+    width: 100% !important;
+    padding: 0 10px;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  #cart-products {
+    padding: 0;
+  }
 }
 
-.woocommerce-form-coupon-toggle {
-    padding: 20px 15px;
-}
-
-#customer_details .col-6 {
-    float: left;
-}
-
-#order_review {
-    width: 50%;
-    float: right;
-}
 
 td, th, th {
     border: 1px solid #cbcaca;
@@ -3901,12 +3992,8 @@ ul {
 
 li {
     display: block;
-    font-size: 13px;
+    font-size: 16px;
     color: #7d7d7d;
-}
-
-#order_review .form-row {
-    float: right;
 }
 
 #order_comments_field label, #order_comments_field .input-text {
@@ -3919,4 +4006,40 @@ span.woocommerce-input-wrapper {
 
 #cursosemdestaque ul.woocommerce {
     margin-left: 35px !important;
+}
+
+.btn {
+  min-width: 200px;
+  padding: 15px 20px;
+  text-align: center;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+@media (min-width: 940px) {
+  #footer-one h5 {
+    margin-top: 70px;
+  }
+}
+
+/* .owl-theme .owl-dots .owl-dot {
+  display: none !important;
+} */
+@media only screen and (min-width: 900px) {
+.img-slide-events  {
+  width: 600px !important;
+}
+.owl-theme .owl-nav {
+  position: relative !important;
+  float: right !important;
+  margin-top: -39%;
+  display:block !important;
+}
+a.carousel-control-prev, a.carousel-control-next {
+  margin-left: -80px;
+}
+}
+.owl-dots {
+  display: none !important;
 }

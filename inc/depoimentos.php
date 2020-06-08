@@ -1,8 +1,19 @@
+<?php 
+      $depoimentos = new WP_Query([
+        'post_type' => 'depoimento',
+        'posts_per_page' => -1
+      ]);
+
+      $cols =  2;
+      $counter = 1;      
+?>
+
+<?php if($depoimentos != null ): ?>
 <section id="depoimentos" class="desktop">
   <div class="container">
     <div class="row">
       <div class="col-12 title-testemonial">
-        <h1>O que nossos alunos estão falando</h1>
+        <h2>O que nossos alunos estão falando</h2>
         <p>Curabitur in libero neque. Nulla at vestibulum massa. Fusce feugiat tellus fermen tum.massa. Fusce feugiat.</p>
       </div>
 
@@ -11,154 +22,49 @@
 
                         <!-- Carousel items -->
                         <div class="carousel-inner">
-
-                            <div class="carousel-item active">
+                          <?php foreach($depoimentos->posts as $key => $depoimento) : ?>
+                            <?php if ( $counter == 1 ): ?>
+                            <div class="carousel-item <?= ($key == 0) ? 'active' : '' ?>">
                                 <div class="row">
+                            <?php endif ?>
                                     <div class="col-md-6 content-testemonial">
                                         <div class="row">
                                           <div class="col-md-8">
                                             <img src="<?php echo get_template_directory_uri(); ?>/img/quotation.svg"><br>
-                                            <p>Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi</p>
-                                            <h4>Gabbar Rahman</h4>
+                                            <p><?= $depoimento->post_content ?></p>
+                                            <h4><?= $depoimento->post_title ?></h4>
                                           </div>
-
+<?php if(get_the_post_thumbnail_url($depoimento) ) : ?>
                                           <div class="col-md-3 photo-testemonial">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/testemonial-man.png"><br>
+                                            <img src="<?= get_the_post_thumbnail_url($depoimento) ?>"><br>
                                           </div>
+                                          <?php endif; ?>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 content-testemonial">
-                                        <div class="row">
-                                          <div class="col-md-8">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/quotation.svg"><br>
-                                            <p>Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi</p>
-                                            <h4>Gabbar Singh</h4>
-                                          </div>
-
-                                          <div class="col-md-3 photo-testemonial">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/testemonial-women.png"><br>
-                                          </div>
-                                        </div>
+                                    <?php if ($counter == $cols): ?>
+                                      </div>
+                                      <!--.row \\\\\\\ -->
                                     </div>
-                                </div>
-                                <!--.row-->
-                            </div>
+                                  <?php endif ?>
+
+                                  <?php 
+                                  $counter++;
+                                  if($counter > $cols){
+                                    $counter = 1;
+                                  } 
+                                  ?>
                             <!--.item-->
+                          <?php endforeach ?>
 
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-6 content-testemonial">
-                                        <div class="row">
-                                          <div class="col-md-8">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/quotation.svg"><br>
-                                            <p>Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi</p>
-                                            <h4>Gabbar Rahman</h4>
-                                          </div>
-
-                                          <div class="col-md-3 photo-testemonial">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/testemonial-man.png"><br>
-                                          </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 content-testemonial">
-                                        <div class="row">
-                                          <div class="col-md-8">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/quotation.svg"><br>
-                                            <p>Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi</p>
-                                            <h4>Gabbar Singh</h4>
-                                          </div>
-
-                                          <div class="col-md-3 photo-testemonial">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/testemonial-women.png"><br>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.row-->
-                            </div>
-                            <!--.item-->
+                          
 
                         </div>
                         <!--.carousel-inner-->
                     </div>
                     <!--.Carousel-->
                 </div>
-          <div class="col-md-12">
-              <ol class="carousel-indicators">
-                <li data-target="#testemonialCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#testemonialCarousel" data-slide-to="1"></li>
-              </ol>
-          </div>
+    </div>
     </div>
 </section>
 
-<!-- ============ SLIDE TESTEMONIAL MOBILE ============ -->
-
-<section id="depoimentos" class="mobile">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 title-testemonial">
-        <h1>O que nossos parceiros estão falando</h1>
-        <p>Curabitur in libero neque. Nulla at vestibulum massa. Fusce feugiat tellus fermen tum.massa. Fusce feugiat.</p>
-      </div>
-
-    <div class="col-md-12">
-                    <div id="testemonialCarousel" class="carousel slide" data-ride="carousel">
-
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-md-12 content-testemonial">
-                                        <div class="row">
-                                          <div class="col-md-8">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/quotation.svg"><br>
-                                            <p>Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi</p>
-                                            <h4>Gabbar Rahman</h4>
-                                          </div>
-
-                                          <div class="col-md-3 photo-testemonial">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/testemonial-man.png"><br>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.row-->
-                            </div>
-                            <!--.item-->
-
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-12 content-testemonial">
-                                        <div class="row">
-                                          <div class="col-md-8">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/quotation.svg"><br>
-                                            <p>Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi</p>
-                                            <h4>Gabbar Rahman</h4>
-                                          </div>
-
-                                          <div class="col-md-3 photo-testemonial">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/testemonial-women.png"><br>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.row-->
-                            </div>
-                            <!--.item-->
-
-                        </div>
-                        <!--.carousel-inner-->
-                    </div>
-                    <!--.Carousel-->
-                </div>
-          <div class="col-md-12">
-              <ol class="carousel-indicators">
-                <li data-target="#testemonialCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#testemonialCarousel" data-slide-to="1"></li>
-              </ol>
-          </div>
-    </div>
-</section>
-<!-- END SLIDE TESTEMONIAL MOBILE -->
+<?php endif ?>

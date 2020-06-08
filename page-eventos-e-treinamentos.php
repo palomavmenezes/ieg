@@ -7,6 +7,8 @@
  */
 
 get_header();
+
+$parceiros = get_field('parceiros', $post->ID);
 ?>
 
 <!-- ============ BANNER ============= -->
@@ -41,7 +43,7 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col-md-12 title-events">
-          <h1>Eventos</h1>
+          <h2>Eventos</h2>
           <p>Com o objetivo de proporcionar a troca de experiências e informações entre executivos e profissionais e fomentar o mercado nacional, o IEG realiza 3 grandes eventos anuais, além de dar suporte a empresas de diversos setores através da mediação de grupos de discussão.</p>
         </div>
       </div>
@@ -50,7 +52,25 @@ get_header();
 
 <?php get_template_part('inc/carousel-events'); ?>
 <?php get_template_part('inc/carousel-treinament'); ?>
-<?php get_template_part('inc/parceiros'); ?>
+<?php if($parceiros != null && count($parceiros) > 0): ?>
+  <section id="empresas-parceiras">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 title-parceiros">
+          <h1> Empresas Parceiras </h1>
+        </div>
+        
+        <?php foreach ( $parceiros as $key => $parceiro ): ?>
+          <div class="col-md-3 parceiros">
+            <img src="<?= $parceiro['logo']['url'] ?>">
+
+          </div>
+        <?php endforeach ?>
+
+  </div>
+  </div>
+  </section>
+<?php endif; ?>
 <?php get_template_part('inc/depoimentos'); ?>
 <?php get_template_part('inc/contact'); ?>
 

@@ -334,7 +334,40 @@ function filter_treinamentos() {
     ]);
 }
 
+function filter_produtos() {
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => -1,
+        's' => esc_attr( $_POST['keyword']),
+        'post_status' => 'publish',
+        'orderby'     => 'title', 
+        'order'       => 'ASC'
+    );
+
+    if ($_POST['keyword'] == '') {
+        $products = get_field('hilighted_products',$_POST['post_id']);
+    }else {
+        $products = new WP_Query($args);
+    }
+
+    ob_start();
+        require 'inc/produto-inner.php';
+
+        $content = ob_get_contents();
+    ob_end_clean();
+    return wp_send_json_success([
+        'html' => $content,
+        'success' => true
+    ]);
+}
+
+
+
 add_action('wp_ajax_nopriv_filter_treinamentos', 'filter_treinamentos');
 add_action('wp_ajax_filter_treinamentos', 'filter_treinamentos');
+
+add_action('wp_ajax_nopriv_filter_produtos', 'filter_produtos');
+add_action('wp_ajax_filter_produtos', 'filter_produtos');
+
 
 

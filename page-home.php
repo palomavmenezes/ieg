@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Por que estudar no IEG</h1>
+          <h2>Por que estudar no IEG</h2>
           <h6>Writers and stars of Veep have responded incredulously to the news an Australian politician<br> required preinstalled stitches way email client, calendar, mapping program.</h6>
         </div>
       </div>
@@ -42,28 +42,28 @@
 				<div class="col bloco-home">
 					<div class="row">
 						<div class="col-12"><h6><img src="<?php echo get_template_directory_uri(); ?>/img/star.svg"></h6></div>
-						<div class="col-12"><h6 class="title-bloco">Motivo 1 ou Big number</h6></div>
+						<div class="col-12"><h5 class="title-bloco">Motivo 1 ou Big number</h5></div>
 						<div class="col-12"><p class="text-bloco">Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im</p></div>
 					</div>
 					</div>
 				<div class="col bloco-home">
 					<div class="row">
 						<div class="col-12"><h6><img src="<?php echo get_template_directory_uri(); ?>/img/date.svg"></h6></div>
-						<div class="col-12"><h6 class="title-bloco">Motivo 2 ou Big number</h6></div>
+						<div class="col-12"><h5 class="title-bloco">Motivo 2 ou Big number</h5></div>
 						<div class="col-12"><p class="text-bloco">Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im</p></div>
 					</div>
 					</div>
 				<div class="col bloco-home">
 					<div class="row">
 						<div class="col-12"><h6><img src="<?php echo get_template_directory_uri(); ?>/img/star.svg"></h6></div>
-						<div class="col-12"><h6 class="title-bloco">Motivo 3 ou Big number</h6></div>
+						<div class="col-12"><h5 class="title-bloco">Motivo 3 ou Big number</h5></div>
 						<div class="col-12"><p class="text-bloco">Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im</p></div>
 					</div>
 					</div>
 				<div class="col bloco-home">
 					<div class="row">
 						<div class="col-12"><h6><img src="<?php echo get_template_directory_uri(); ?>/img/date.svg"></h6></div>
-						<div class="col-12"><h6 class="title-bloco">Motivo 4 ou Big number</h6></div>
+						<div class="col-12"><h5 class="title-bloco">Motivo 4 ou Big number</h5></div>
 						<div class="col-12"><p class="text-bloco">Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im</p></div>
 					</div>
 					</div>
@@ -76,7 +76,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h1>Cursos em destaque</h1>
+					<h2>Cursos em destaque</h2>
 				</div>
 			</div>
 

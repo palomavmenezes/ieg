@@ -3,11 +3,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li><a href="<?php echo get_site_url(); ?>/pesquisa">Pesquisa</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/consultoria">Consultoria</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/eventos-e-treinamentos">Eventos e treinamentos</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/relatorios-e-publicacoes">Relatórios e Publicações</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/csc">CSC</a></li>
+            <?php wp_nav_menu( array( 'theme_location' => 'entire' ) ); ?>
         </ul>
       </nav><!-- .main-nav -->
 
@@ -29,12 +25,8 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li><a href="<?php echo get_site_url(); ?>/pesquisa">Pesquisa</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/consultoria">Consultoria</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/eventos-e-treinamentos">Eventos e treinamentos</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/relatorios-e-publicacoes">Relatórios e Publicações</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/csc">CSC</a></li>
+      <ul class="mr-auto">
+        <?php wp_nav_menu( array( 'theme_location' => 'entire' ) ); ?>
       </ul>
       <!-- Links -->
     </div>

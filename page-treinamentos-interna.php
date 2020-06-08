@@ -42,7 +42,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h1>Uma imersão de criatividade e experimentação, que vai te dar as ferramentas necessárias para exercer uma boa comunicação</h1>
+					<h2>Uma imersão de criatividade e experimentação, que vai te dar as ferramentas necessárias para exercer uma boa comunicação</h2>
 					<h6>O curso possui uma abordagem inovadora, trazendo diversos conceitos da gestão empresarial para os participantes, que terão como apoio para desenvolver suas análises a ferramenta MS Excel. Através de casos práticos e reais, com enfoque em diversos setores da economia e de diversas áreas organizacionais das empresas, o participante passará pelas principais funcionalidades desse software de uma forma prática e orientada ao mercado.</h6>
 				</div>
 			</div>
@@ -72,22 +72,22 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col-12 title">
-          <h1>Nossos números</h1>
+          <h2>Nossos números</h2>
           <p>Writers and stars of Veep have responded incredulously to the news an Australian politician required preinstalled stitches way email client, calendar, mapping program.Writers and stars of Veep have responded incredulously to the news an Australian.</p>
         </div>
       </div>
       <div class="row">
         <div class="col numbers-title">
-          <h1>1200</h1>
-          <h6>sobre o número</h6>
+          <h3>1200</h3>
+          <h5>sobre o número</h5>
           <p>Apresentação de cases de empresas que já possuem CSC, incentivando os participantes a resolverem um problema específico relacionado ao tema e a compartilharem práticas e soluções.</p></div>
         <div class="col numbers-title">
-          <h1>1200</h1>
-          <h6>sobre o número</h6>
+          <h3>1200</h3>
+          <h5>sobre o número</h5>
           <p>Apresentação de cases de empresas que já possuem CSC, incentivando os participantes a resolverem um problema específico relacionado ao tema e a compartilharem práticas e soluções.</p></div>
         <div class="col numbers-title">
-          <h1>1200</h1>
-          <h6>sobre o número</h6>
+          <h3>1200</h3>
+          <h5>sobre o número</h5>
           <p>Apresentação de cases de empresas que já possuem CSC, incentivando os participantes a resolverem um problema específico relacionado ao tema e a compartilharem práticas e soluções.</p></div>
       </div>
     </div>
@@ -103,7 +103,7 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col-md-12 title-events">
-          <h1>Conheça outras soluções do IEG que podem alavancar a gestão da sua empresa</h1>
+          <h2>Conheça outras soluções do IEG que podem alavancar a gestão da sua empresa</h2>
             <p style="color: #000;">Com o objetivo de proporcionar a troca de experiências e informações entre executivos e profissionais e fomentar o mercado nacional, o IEG realiza 3 grandes eventos anuais, além de dar suporte a empresas de diversos setores através da mediação de grupos de discussão.</p>
         </div>
         <div class="col-md-3"><button type="button" class="btn btn-light btn-treinamentos">Workshops</button></div>

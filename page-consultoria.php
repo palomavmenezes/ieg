@@ -37,7 +37,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h1>Confira as soluções do IEG para apoiar a sua empresa em seus desafios de gestão</h1>
+					<h2>Confira as soluções do IEG para apoiar a sua empresa em seus desafios de gestão</h2>
 					<h6>O IEG possui uma equipe altamente capacitada para desempenhar projetos que irão aprimorar a gestão da sua empresa. Nossos consultores têm como objetivo encontrar as melhores soluções para a sua operação.</h6>
 				</div>
 			</div>
@@ -48,8 +48,8 @@ get_header();
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 content-consultoria desktop">
-					<h1>Implementação e Sustentação de Centros de Serviços Compartilhados</h1>
-					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
+					<h2>Implementação e Sustentação de Centros de Serviços Compartilhados</h2>
+					<a href="<?php echo get_site_url(); ?>/implementacao-e-sustentacao-de-centros-de-servicos-compartilhados" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</a>
 				</div>
 
 				<div class="col-md-6 blocos-consultoria">
@@ -67,8 +67,8 @@ get_header();
 				</div>
 
 				<div class="col-md-6 content-consultoria">
-					<h1>Mapeamento e Otimização de Processos</h1>
-					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
+					<h2>Mapeamento e Otimização de Processos</h2>
+					<a href="<?php echo get_site_url(); ?>/mapeamento-e-otimizacao-de-processos" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</a>
 				</div>
 
 				<div class="col-md-6 blocos-consultoria mobile">
@@ -82,8 +82,8 @@ get_header();
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 content-consultoria">
-					<h1>Modelo de Gestão e Desenvolvimento de Pessoas</h1>
-					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
+					<h2>Modelo de Gestão e Desenvolvimento de Pessoas</h2>
+					<a href="<?php echo get_site_url(); ?>/modelo-de-gestao-e-desenvolvimento-de-pessoas" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</a>
 				</div>
 
 				<div class="col-md-6 blocos-consultoria">
@@ -101,8 +101,8 @@ get_header();
 				</div>
 
 				<div class="col-md-6 content-consultoria">
-					<h1>Planejamento Estratégico</h1>
-					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
+					<h2>Planejamento Estratégico</h2>
+					<a href="<?php echo get_site_url(); ?>/planejamento-estrategico" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</a>
 				</div>
 
 				<div class="col-md-6 blocos-consultoria mobile">
@@ -116,8 +116,8 @@ get_header();
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 content-consultoria">
-					<h1>Plano de Negócio</h1>
-					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
+					<h2>Plano de Negócio</h2>
+					<a href="<?php echo get_site_url(); ?>/plano-de-negocio" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</a>
 				</div>
 
 				<div class="col-md-6 blocos-consultoria">
@@ -135,8 +135,8 @@ get_header();
 				</div>
 
 				<div class="col-md-6 content-consultoria">
-					<h1>Reestruturação organizacional</h1>
-					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
+					<h2>Reestruturação organizacional</h2>
+					<a href="<?php echo get_site_url(); ?>/reestruturacao-organizacional" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</a>
 				</div>
 
 				<div class="col-md-6 blocos-consultoria mobile">
@@ -145,7 +145,8 @@ get_header();
 			</div>
 		</div>
 </section>
-
+<?php get_template_part('inc/parceiros'); ?>
+<?php get_template_part('inc/depoimentos'); ?>
 <?php get_template_part('inc/contact-solution'); ?>
 
 

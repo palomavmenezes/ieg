@@ -109,7 +109,7 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 title">
-						<h1>SOBRE O SHARED SERVICES<br> KNOWLEDGE EXCHANGE</h1>
+						<h2>SOBRE O SHARED SERVICES<br> KNOWLEDGE EXCHANGE</h2>
 						<h6>Desde 2013, o Shared Services Knowledge Exchange representa o maior evento de interação e discussão sobre Serviços Compartilhados do país, reunindo um público formado por alta e média gerência em busca de soluções operacionais para as principais dificuldades e limitações enfrentadas pelos Centros. Em 2018, o 6th SSKE contou com a presença de mais de 150 profissionais de cerca de 60 empresas que debateram o CSC como protagonista da transformação das organizações. Neste ano, o 7th SSKE aconteceu nos dias 20 e 21 de agosto e debateu o tema: "Entre erros e acertos, como passar pela jornada de transformação dos CSCs?"</h6>
 						<img src="<?php echo get_template_directory_uri(); ?>/img/consult-interna.jpg">
 					</div>
@@ -137,7 +137,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h1>PATROCINADORES 8th SSKE</h1>
+					<h2>PATROCINADORES 8th SSKE</h2>
 				</div>
 
 				<div class="col-md-12 premium">
@@ -193,7 +193,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h1>Empresas participantes 2019</h1>
+					<h2>Empresas participantes 2019</h2>
 				</div>
 				<div class="col-sm-2 offset-1"></div>
 				<div class="col-md-2 logo-participantes"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-beejobs.png"></div>
@@ -225,7 +225,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h1>Veja como foi o 8th SSke</h1>
+					<h2>Veja como foi o 8th SSke</h2>
 				</div>
 				<div class="col-12">
 					<div class="row">
@@ -256,7 +256,7 @@ get_header();
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12 txt-edit">
-					<h1>Veja como foi Edição anterior do sske</h1>
+					<h2>Veja como foi Edição anterior do sske</h2>
 				</div>
 			</div>
 

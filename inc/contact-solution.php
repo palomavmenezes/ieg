@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Gostaria de mais informações?</h1>
+        <h2>Precisa de uma solução diferente das listadas acima? <br>Deixe uma mensagem que entraremos em contato com você</h2>
       </div>
       <div class="col-md-12 contact-form">
         <div class="row">

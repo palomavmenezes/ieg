@@ -3,9 +3,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li><a href="<?php echo get_site_url(); ?>/para-voce">Para você</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/para-sua-empresa">Para sua empresa</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/sobre">Sobre</a></li>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
         </ul>
       </nav><!-- .main-nav -->
 
@@ -25,10 +23,8 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <!-- Links -->
-      <ul class="mobile-nav mr-auto">
-        <li><a href="<?php echo get_site_url(); ?>/para-voce">Para você</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/para-sua-empresa">Para sua empresa</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/sobre">Sobre</a></li>
+      <ul class="mr-auto">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </ul>
       <!-- Links -->
     </div>

@@ -37,8 +37,8 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h1>Conheça nossas pesquisas</h1>
-					<h6>Writers and stars of Veep have responded incredulously to the news an Australian politician required preinstalled stitches way email client, calendar, mapping program.</h6>
+					<h2>Conheça nossas pesquisas</h2>
+					<h6>O IEG realiza estudos de benchmarking e pesquisas customizadas, sendo capaz de fornecer informações extremamente relevantes acerca dos vários setores da economia.</h6>
 				</div>
 			</div>
 		</div>
@@ -48,8 +48,8 @@ get_header();
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 content-consultoria">
-					<h1>Benchmarking de processos</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices accumsan ornare. Phasellus tristique ullamcorper luctus.</p>
+					<h2>Benchmarking de Processos</h2>
+					<p>O estudo permite a comparação do desempenho dos processos de diferentes empresas, sendo analisados custos, indicadores de desempenho, sistemas, tecnologias e práticas de gestão e operação adotadas.</p>
 					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
 				</div>
 
@@ -68,8 +68,8 @@ get_header();
 				</div>
 
 				<div class="col-md-6 content-consultoria">
-					<h1>Pesquisa de satisfação</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices accumsan ornare. Phasellus tristique ullamcorper luctus.</p>
+					<h2>Pesquisa de Satisfação</h2>
+					<p>Possui o objetivo de mensurar o nível de satisfação dos clientes internos e/ou externos em relação aos serviços prestados, podendo ser aplicada em empresas de qualquer setor da economia.</p>
 					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
 				</div>
 
@@ -84,8 +84,8 @@ get_header();
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 content-consultoria">
-					<h1>Estudos em gestão de pessoas</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices accumsan ornare. Phasellus tristique ullamcorper luctus.</p>
+					<h2>Estudos em Gestão de Pessoas</h2>
+					<p>Permite a identificação de características dos colaboradores da empresa e a elaboração de estratégias que potencializem seus resultados e aumentem o engajamento demonstrado no dia a dia da operação.</p>
 					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
 				</div>
 
@@ -104,8 +104,8 @@ get_header();
 				</div>
 
 				<div class="col-md-6 content-consultoria">
-					<h1>Análises de Mercado</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices accumsan ornare. Phasellus tristique ullamcorper luctus.</p>
+					<h2>Análises de Mercado</h2>
+					<p>Com o levantamento de informações relevantes sobre o campo de atuação da empresa, possibilita a análise do seu posicionamento em relação ao mercado e a definição de estratégias e planos de ação orientados a resultados</p>
 					<button type="button" class="btn btn-light btn-events" style="width: 230px; height: 50px; font-size: 18px; padding: 0px;">Ver mais</button>
 				</div>
 

@@ -26,6 +26,7 @@
 
   <!-- Bootstrap CSS File -->
   <link href="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
   <!-- Libraries CSS Files -->
   <link href="<?php echo get_template_directory_uri(); ?>/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -35,6 +36,8 @@
   <link href="<?php echo get_template_directory_uri(); ?>/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css">
   <!-- Main Stylesheet File -->
   <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
 
@@ -69,6 +72,7 @@
 
   <!-- Script dos Ícones Bootstrap -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <script type="text/javascript">
   $('.carousel').carousel()
@@ -78,6 +82,11 @@
         interval: 5000
     });
   </script>
+<script>
+  $("#owl-demo").owlCarousel({
+    navigation : true
+  });
+</script>
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/funcoes.js"></script>
 
@@ -86,7 +95,7 @@
 
 <body>
   <main>
-      <header id="header-top" class="fixed-top">
+      <header id="header-top">
     <div class="container container-top-bar">
       <div class="row bar">
         <div class="col-md-12 top-bar">

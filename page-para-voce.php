@@ -1,7 +1,9 @@
 <?php get_header();
   global $post;
 
-  $products = get_field( 'hilighted_products', $post->ID );
+  if (! wp_doing_ajax()) {
+    $products = get_field( 'hilighted_products', $post->ID );
+  }
 ?>
 
 <!-- !!!!! ============ AQUI COMEÇA O CONTEÚDO DA PÁGINA ============ !!!! -->
@@ -42,64 +44,12 @@
 				<div class="col-md-9">
 				</div>
 				<div class="col-md-3">
-					 <input type="text" id="txtBusca" placeholder="Filtrar por interesses"/>
+					 <input type="text" id="txtBusca" placeholder="Filtrar por interesses" onkeyup="fetch()" name="pinput" data-postid="<?php echo $post->ID ?>" />
 				</div>
 			</div>
-
-		  <div class="row">
-        <?php if( count( $products ) > 0 ): ?>
-          <?php foreach ( $products as $p ): ?>
-            <?php 
-              $product = wc_get_product( $p->ID );
-            ?>
-            <div class="col col-sm-4 bloco-cursos">
-              <div class="row">
-                <div class="col-12 photo-cursos"><a href="<?= get_permalink( $product->get_id() ) ?>"><img src="<?php echo get_the_post_thumbnail_url( $product->get_id() ) ?>"></a></div>
-                <div class="col-12"><h6 class="title-bloco"><a href="<?= get_permalink( $product->get_id() ) ?>"><?= $product->get_name() ?></a></h6></div>
-
-                <!-- <ul class="col-12 stars woocommerce">
-                  <li>
-                    <?php if (true) :
-
-                      $average = $product->get_average_rating();
-                    ?>
-                    <?php echo '<div class="star-rating" title="'.sprintf(__( 'Rated %s out of 5', 'woocommerce' ), $average).'"><span style="width:'.( ( $average / 5 ) * 100 ) . '%"><strong itemprop="ratingValue" class="rating">'.$average.'</strong> '.__( 'out of 5', 'woocommerce' ).'</span></div>'; ?>
-                    <?php endif; ?>
-                  </li>
-                </ul> -->
-
-                <ul class="woocommerce">
-<li>
-    <?php $average = $product->get_average_rating();
-
-     ?>
-    <?php echo '<div class="star-rating" title="'.sprintf(__( 'Rated %s out of 5', 'woocommerce' ), $average).'"><span style="width:'.( ( $average / 5 ) * 100 ) . '%"><strong itemprop="ratingValue" class="rating">'.$average.'</strong> '.__( 'out of 5', 'woocommerce' ).'</span></div>'; ?>
-
-</li>
-</ul>
-
-                <div class="col-12"><p class="text-bloco"><a href="<?= get_permalink( $product->get_id() ) ?>"><?= $product->post->post_excerpt ?></a></p></div></a>
-              </div>
-
-              <div class="row btn-comprar">
-                <div class="col-5"><a href="<?= get_permalink( $product->get_id() ) ?>"><p class="valor-curso"><?= $product->get_price_html() ?></p></p></div>
-                
-                <div class="col-7">
-                  <a class="buy" href="<?= get_permalink( $product->get_id() ) ?>">Comprar</a>
-                </div>
-              </div>
-            </div>
-          <?php endforeach ?>
-        <?php else: ?>
-          <div class="col col-sm-12">
-            <p>Nenhum produto encontrado.</p>
-          </div>
-        <?php endif; ?> 
+      <div id="products">
+        <?php require 'inc/produto-inner.php' ?>
       </div>
-
-		
-
-
 
 		</div>
 	</section>
@@ -112,7 +62,31 @@
 </main>
 
 <script>
-	$('.carousel').carousel()
+
+
+  function fetch(){
+    var keyword = jQuery('#txtBusca').val();
+    var post_id = jQuery('#txtBusca').data('postid');
+    if (keyword == '') {
+      keyword = '';
+    }
+    jQuery.ajax({
+        url: '<?php echo admin_url('admin-ajax.php'); ?>',
+        type: 'post',
+        data: { 
+          post_id: post_id,
+          action: 'filter_produtos', 
+          keyword: keyword
+        },
+        success: function(response) {
+            $('#products .products-inner').remove();
+            jQuery('#products').append(response.data.html);
+        }
+    });
+
+}
+
+	// $('.carousel').carousel()
 </script>
 
 <?php

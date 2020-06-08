@@ -19,7 +19,23 @@ $previous_edition_banner = get_field( 'previous_edition_banner', $post->ID );
 $previous_edition_banner_text = get_field( 'previous_edition_banner_text', $post->ID );
 $previous_edition_url = get_field( 'previous_edition_url', $post->ID );
 $previous_events = get_field( 'previous_events', $post->ID );
+$speaker_banner = get_field('speaker_banner', $post->ID);
+$url_download_ver_programacao = get_field('url_download_ver_programacao', $post->ID);
+$url_download_ver_palestrantes = get_field('url_download_ver_palestrantes', $post->ID);
+$url_download_ver_mais = get_field('url_download_ver_mais', $post->ID);
+$url_do_botao_quero_participar = get_field('url_do_botao_quero_participar', $post->ID);
+  $args = array(
+      'post_type' => 'evento',
+      'posts_per_page' => -1,
+      'post_status' => 'publish',
+      'orderby' => 'ASC'
+  );
 
+  $eventos = new WP_Query($args);
+  $cols =  2;
+  $counter = 1;
+  
+  
 get_header();
 ?> 
 
@@ -42,19 +58,19 @@ get_header();
         <div class="col-md-3"></div>
 
         <div class="col-md-3 desktop">
-          <button type="button" class="btn btn-green">Quero participar</button>
+          <a href="<?= $url_do_botao_quero_participar ?>" class="btn btn-green">Quero participar</a>
         </div>
 
         <div class="col-md-3 desktop">
-          <button type="button" class="btn btn-yellow">Quero participar</button>
+          <a href="<?= $url_do_botao_quero_participar ?>" class="btn btn-yellow">Quero participar</a>
         </div>
 
         <div class="col-md-3 btn-responsive mobile">
-          <button type="button" class="btn btn-green">Quero participar</button>
+          <a href="<?= $url_do_botao_quero_participar ?>" class="btn btn-green">Quero participar</a>
         </div>
 
         <div class="col-md-3 btn-responsive mobile">
-          <button type="button" class="btn btn-yellow">Quero participar</button>
+          <a href="<?= $url_do_botao_quero_participar ?>" class="btn btn-yellow">Quero participar</a>
         </div>
 
         <div class="col-md-3"></div>
@@ -72,7 +88,7 @@ get_header();
             <div class="col-md-6 title">
               <div class="countdown">
                 <div class="row place-center">
-                  <div class="col-sm-12 title-countdown">O evento começará em</div>
+                  <div class="col-sm-12 title-countdown"><h4>O evento começará em</h4></div>
                   
                   <div class="row box-date">
                     <div id="days" class="col-sm-12 date-number">50</div>
@@ -126,7 +142,7 @@ get_header();
       <div class="container">
         <div class="row">
           <div class="col-md-12 title">
-            <h1><?php echo $description_title ?></h1>
+            <h2><?php echo $description_title ?></h2>
             <h6><?php echo $description_text ?></h6>
             <img src="<?php echo $description_image ?>">
           </div>
@@ -138,23 +154,24 @@ get_header();
   <section id="courses">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 programacao">
-          <button type="button" class="btn btn-yellow">Ver Programação</button>
+        <div class="col-md-6 programacao" style="background: url(<?php echo $banner_programation ?>), 0% 0% no-repeat padding-box; background-size: cover;">
+          <a href="<?php echo $url_download_ver_programacao; ?>" class="btn btn-yellow">Ver Programação</a>
         </div>
 
-        <div class="col-md-6 palestrantes">
-          <button type="button" class="btn btn-green">Conheça os Palestrantes</button>
+        <div class="col-md-6 palestrantes" style="background: url(<?php echo $speaker_banner ?>), 0% 0% no-repeat padding-box; background-size: cover;">
+          <a href="<?php echo $url_download_ver_palestrantes; ?>" class="btn btn-blue">Ver Palestrantes</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- AQUI COMEÇA OS PATROCINADORES DO EVENTO -->
+<?php if ($premium_sponsors != null || $master_sponsors != null || $startup_sponsors): ?>
   <section id="patrocinadores">
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>PATROCINADORES 8th SSKE</h1>
+          <h2>PATROCINADORES 8th SSKE</h2>
         </div>
 
         <?php if ( count( $premium_sponsors ) ): ?>
@@ -205,19 +222,19 @@ get_header();
       </div>
     </div>
   </section>
-
+  <?php endif ?>
   <!-- AQUI O MAPA -->
   <section id="map">
       <iframe src="<?php echo $url_gmaps ?>" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
   </section>
 
-  <?php if( count( $companies ) > 0 ): ?>
+  <?php if($companies != null && count( $companies ) > 0 ): ?>
     <!-- AQUI COMEÇA A CONTAGEM REGRESSIVA DO EVENTO -->
     <section id="empresas-participantes">
       <div class="container">
         <div class="row">
           <div class="col-md-12 title">
-            <h1>Empresas participantes</h1>
+            <h2>Empresas participantes</h2>
           </div>
           
           <?php foreach ( $companies as $company ): ?>
@@ -233,7 +250,7 @@ get_header();
       <div class="container">
         <!-- <div class="row"> -->
           <div class="col-md-12">
-            <h1>Veja como foi o evento</h1>
+            <h2>Veja como foi o evento</h2>
           </div>
           <div class="col-12">
             <div class="row">
@@ -245,7 +262,7 @@ get_header();
             </div>
           </div>
 
-          <a href="<?php echo $external_gallery ?>" target="_blank" class="btn btn-blue">Ver mais fotos</a>
+          <a href="<?php echo $url_download_ver_mais; ?>" target="_blank" class="btn btn-blue">Ver mais fotos</a>
         </div>
     </section>
   <?php endif; ?>
@@ -258,7 +275,7 @@ get_header();
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 txt-edit">
-          <h1>Veja como foi Edição anterior</h1>
+          <h2>Veja como foi Edição anterior</h2>
         </div>
       </div>
 
@@ -305,56 +322,56 @@ get_header();
     <div class="row">
   <div class="col-12">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
   <div class="carousel-inner">
-    <div class="carousel-item active slide-events">
+  <?php if( count( $eventos->posts ) > 0 ): ?>
+      <?php foreach ( $eventos->posts as $key => $evento ): ?>
+        <?php 
+          $banner      = get_field('card_image', $evento->ID );
+          $title       = get_field('card_title', $evento->ID );
+          $description = get_field('card_small_desc', $evento->ID );
+          $image       = get_field('card_image', $evento->ID);
+          $local       = get_field('card_event_local', $evento->ID);
+        ?>
+       
+      <?php if ( $counter == 1): ?>  
+      <div class=" slide-events carousel-item <?= ($key == 0) ? 'active' : '' ?> ">
       <div class="row w-100">
-        <div class="col-md-6">
+      <?php endif ?>
+        <div class="col-md-6 <?= $counter%2 == 0? 'second-slide' : '' ?>">
             <div class="row events">
-              <div class="col-md-6"><img src="<?php echo get_template_directory_uri(); ?>/img/img-caroulsel1.jpeg" class="img-slide-events"></div>
-              <div class="col-md-4 description"><h4>01 de Novembro</h4>
-                <p>Breve descrição do evento</p>
-                <p>Cubo Itaú - São Paulo, SP</p>
-                <button type="button" class="btn btn-light btn-events">Conheça o SSLF <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right-white.png"></button>
+              <div class="col-md-6"><img src="<?php echo $image['url']; ?>" class="img-slide-events img-fluid"></div>
+              <div class="col-md-4 description">
+              <h4><?php echo  $title; ?></h4>
+                <p><?php echo $description; ?></p>
+                <p><?php echo $local; ?></p>
+                <a href="<?= get_permalink($evento) ?>">
+                <button type="button" class="btn btn-light btn-events">Conheça<img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right-white.png"></button>
+                </a>
               </div>
             </div>
         </div>
-        <div class="col-md-6 second-slide">
-              <div class="row events">
-              <div class="col-md-6"><img src="<?php echo get_template_directory_uri(); ?>/img/img-caroulsel2.jpg" class="img-slide-events"></div>
-              <div class="col-md-4 description"><h4>02 de Novembro</h4>
-                <p>Breve descrição do evento</p>
-                <p>Cubo Itaú - São Paulo, SP</p>
-                <button type="button" class="btn btn-light btn-events">Conheça o SSLF <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right-white.png"></button>
-              </div>
-            </div>
+
+        <?php if ($counter == $cols): ?>
+
+          </div>
+          <!--.row-->
         </div>
-      </div>
-    </div>
-    <div class="carousel-item slide-events">
-      <div class="row w-100">
-        <div class="col-md-6">
-            <div class="row events">
-              <div class="col-md-6"><img src="<?php echo get_template_directory_uri(); ?>/img/img-caroulsel2.jpg" class="img-slide-events"></div>
-              <div class="col-md-4 description"><h4>02 de Novembro</h4>
-                <p>Breve descrição do evento</p>
-                <p>Cubo Itaú - São Paulo, SP</p>
-                <button type="button" class="btn btn-light btn-events">Conheça o SSLF <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right-white.png"></button>
-              </div>
-            </div>
+      <?php endif ?>
+
+      <?php 
+        $counter++;
+      if($counter > $cols) $counter = 1;
+      ?>
+
+      <?php endforeach ?>
+
+              <?php else: ?>
+                <p>Nenhum evento encontrado.</p>
+              <?php endif ?>
         </div>
-        <div class="col-md-6 second-slide">
-              <div class="row">
-              <div class="col-md-6"><img src="<?php echo get_template_directory_uri(); ?>/img/img-caroulsel1.jpeg" class="img-slide-events"></div>
-              <div class="col-md-4 description"><h4>01 de Novembro</h4>
-                <p>Breve descrição do evento</p>
-                <p>Cubo Itaú - São Paulo, SP</p>
-                <button type="button" class="btn btn-light btn-events">Conheça o SSLF <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right-white.png"></button>
-              </div>
-            </div>
-        </div>
-      </div>
-  </div>
-  </div>
+
+  
 </div>
 </div>
     </div>

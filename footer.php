@@ -1,4 +1,3 @@
-
 <?php wp_footer(); ?>
 
 <footer>
@@ -17,7 +16,7 @@
       <div class="col-md-4 colum-2">
         <div class="row">
           <div class="col-md-12">
-            <h4>Visite nossas redes sociais</h4>
+            <h5>Visite nossas redes sociais</h5>
             <p>Since the 1500s, when an unknown printer took <br>a galley of type and scrambled.</p>
             <ul class="social-icons">
               <li><img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/6432525231530103308-128.png"></li>
@@ -30,7 +29,7 @@
       <div class="col-md-4 colum-3">
         <div class="row">
           <div class="col-md-12">
-            <h4>Fale conosco</h4>
+            <h5>Fale conosco</h5>
             <p>My Company , 4578 Marmora Road, Glasgow <br>D04 89GR <br>Call us now: 0123-456-789 <br>Email: support@whatever.com</p>
           </div>
         </div>
@@ -45,7 +44,7 @@
       <div class="col-sm-6 col-md-2 t-colum-1">
         <div class="row">
           <div class="col-md-12">
-            <h4>Infomation</h4>
+            <h5>Infomation</h5>
             <ul class="menu-footer">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Information</a></li>
@@ -59,7 +58,7 @@
       <div class="col-sm-6 col-md-2 t-colum-2">
         <div class="row">
           <div class="col-md-12">
-            <h4>Service</h4>
+            <h5>Service</h5>
             <ul class="menu-footer">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Information</a></li>
@@ -73,7 +72,7 @@
       <div class="col-sm-6 col-md-2 t-colum-3">
         <div class="row">
           <div class="col-md-12">
-            <h4>Extras</h4>
+            <h5>Extras</h5>
             <ul class="menu-footer">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Information</a></li>
@@ -86,7 +85,7 @@
       <div class="col-sm-6 col-md-2 t-colum-4">
         <div class="row">
           <div class="col-md-12">
-            <h4>My Account</h4>
+            <h5>My Account</h5>
             <ul class="menu-footer">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Information</a></li>
@@ -100,7 +99,7 @@
       <div class="col-sm-6 col-md-2 t-colum-5">
         <div class="row">
           <div class="col-md-12">
-            <h4>Userful Links</h4>
+            <h5>Userful Links</h5>
             <ul class="menu-footer">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Information</a></li>
@@ -114,7 +113,7 @@
       <div class="col-sm-6 col-md-2 t-colum-6">
         <div class="row">
           <div class="col-md-12">
-            <h4>Our Offers</h4>
+            <h5>Our Offers</h5>
             <ul class="menu-footer">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Information</a></li>

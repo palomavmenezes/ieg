@@ -1,0 +1,3947 @@
+@charset "UTF-8";
+/*
+Theme Name: IEG - Cursos e Treinamentos
+Theme URI: https://ieg.com.br
+Author: Data Cartês
+Author URI: https://datacartes.com.br
+Version: 1.0.0
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+html, body {
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #444;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0;
+}
+
+@media (max-width: 1366px) {
+  .container-fluid {
+  max-width: 1334px;
+  margin: 0
+  }
+
+  .container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 100px;
+  }
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 100px;
+}
+
+a {
+  color: #113589;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0b6bd3;
+  outline: none;
+  text-decoration: none;
+}
+
+.current_page_item a {
+    font-weight: 600 !important;
+    color: #0E1B59 !important;
+    border-bottom: 2px solid #0E1B59;
+}
+
+h1 { font-size: 52px; font-family: "Poppins-Bold"; }
+h2 { font-size: 48px; font-family: "Poppins-SemiBold"; }
+h3 { font-size: 36px; font-family: "Poppins-SemiBold"; }
+h4 { font-size: 30px; font-family: "Poppins-Bold"; }
+h5 { font-size: 20px; font-family: "Poppins-Bold"; }
+h6 { font-size: 16px; font-family: "Poppins"; }
+p { font-size: 16px; font-family: "Poppins"; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins.otf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(fonts/Poppins-Bold.otf);
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(fonts/Poppins-SemiBold.otf);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/* TOP BAR */
+
+.top-bar ul {
+    margin: 5px 15px 0px 0px;
+}
+
+.top-bar li {
+    display: inline;
+    margin: 0px 0px 0 10px;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+#header-top {
+    background: transparent linear-gradient(268deg, #0C0E41 0%, #1760D7 100%) 0% 0% no-repeat padding-box;
+    padding-bottom: 7px;
+}
+
+.top-bar {
+    text-align: right;
+    padding: 0;
+}
+
+@media only screen and (max-width: 630px) {
+  .top-bar {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Logo */
+
+a.scrollto.logo-ieg {
+    font-size: 36px;
+    font-family: "Poppins-Bold";
+}
+
+.logo.float-left {
+    min-width: 15%;
+    margin: 10px 0;
+}
+
+nav.main-nav.float-right.d-none.d-lg-block.menu {
+    width: 85%;
+}
+
+/* Desktop Navigation */
+
+div#menu {
+    margin: 15px 0px;
+}
+
+.main-nav {
+  /* Drop Down */
+  /* Deep Drop Down */
+}
+
+.main-nav,
+.main-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+}
+
+.main-nav > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.main-nav a {
+    display: block;
+    position: relative;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 0px 5px 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.main-nav a:hover,
+.main-nav .active > a,
+.main-nav li:hover > a {
+  color: #113589;
+  text-decoration: none;
+}
+
+.main-nav .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: ease all 0.3s;
+}
+
+.main-nav .drop-down:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.main-nav .drop-down li {
+  min-width: 180px;
+  position: relative;
+}
+
+.main-nav .drop-down ul a {
+  padding: 10px 20px;
+  color: #113589;
+}
+
+.main-nav .drop-down ul a:hover,
+.main-nav .drop-down ul .active > a,
+.main-nav .drop-down ul li:hover > a {
+  color: #113589;
+}
+
+.main-nav .drop-down > a:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  padding-left: 10px;
+}
+
+.main-nav .drop-down .drop-down ul {
+  top: 0;
+  left: calc(100% - 30px);
+}
+
+.main-nav .drop-down .drop-down:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+}
+
+.main-nav .drop-down .drop-down > a {
+  padding-right: 35px;
+}
+
+.main-nav .drop-down .drop-down > a:after {
+  content: "\f105";
+  position: absolute;
+  right: 15px;
+}
+
+/* Mobile Navigation */
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
+  color: #74b5fc;
+  text-decoration: none;
+}
+
+.mobile-nav .drop-down > a:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  padding-left: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.mobile-nav .active.drop-down > a:after {
+  content: "\f077";
+}
+
+.navbar-collapse {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0px;
+    padding: 20px;
+    background: #fff;
+    z-index: 1;
+    width: 75%;
+}
+
+.navbar-collapse li {
+    margin: 0;
+    padding: 5px 15px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.navbar-collapse li:hover {
+    background: #12378B;
+    color: #fff;
+}
+
+.navbar-collapse a:hover {
+    color: #fff;
+}
+
+.navbar {
+    float: right;
+}
+
+.mobile-nav-toggle {
+    background: transparent;
+    border: 1px solid #c1c1c1;
+    padding: 5px 10px;
+}
+
+@media (min-width: 992px) {
+  .top-mobile {
+    display: none;
+  }
+}
+/* CSS Nav Bar responsivo Tablets e Mobiles */
+
+@media only screen and (max-width: 1024px) {
+  .logo.float-left {
+    margin-left: -15px;
+  }
+}
+
+#header {
+    background: #FFFFFF;
+    height: 85px;
+    display: flex;
+    place-items: center;
+    box-shadow: 0 0 3px #a1a1a1;
+    z-index: 1;
+}
+
+#header.header-scrolled,
+#header.header-pages {
+    height: 80px;
+    padding: 20px 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 999999;
+    transition-duration: 0.6s;
+    }
+}
+
+#header .logo h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #00366f;
+  text-decoration: none;
+}
+
+#header .logo img {
+    padding: 0;
+    margin: -15px 30px;
+    max-height: 70px;
+}
+
+.main-pages {
+  margin-top: 60px;
+}
+
+#header .show {
+    height: 100vh;
+    width: 75%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+}
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+.logo {
+    margin-right: 95px;
+}
+
+@media screen and (max-width: 629px) {
+  #header .logo img {
+    margin: -10px 0px -10px 20px;
+    max-height: 60px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+
+#banner {
+    background: url(img/bg-eventos-e-treinamentos.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: center;
+    height: 464px;
+}
+
+#banner h1 {
+    color: #fff;
+    text-align: center;
+    margin: 200px 0px;
+/*    text-shadow: 0 0 4px grey; */
+}
+
+@media (max-width: 630px) {
+  .col-md-6.second-slide {
+    margin-left: 0 !important;
+  }
+
+  .events {
+    height: auto !important;
+    margin-right: -15px !important;
+  }
+
+  .events .col-md-6 {
+    padding: 0;
+  }
+}
+
+/* Breadcrumb */
+
+.breadcrumb a {
+    color: #000000;
+    opacity: 0.58;
+}
+
+section#breadcrumb {
+    background: #E8E8E8;
+}
+
+.breadcrumb {
+  background: none !important;
+}
+
+/*--------------------------------------------------------------
+# Eventos
+--------------------------------------------------------------*/
+
+.title-events h1 {
+    color: #000;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.title-events p {
+    color: #737373;
+    text-align: center;
+}
+
+.title-events {
+    margin-top: 20px;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+
+/* Sections Header
+--------------------------------*/
+
+.section-header h3 {
+  color: #283d50;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 60px;
+  color: #556877;
+  width: 50%;
+}
+
+/* Section with background
+--------------------------------*/
+
+.section-bg {
+  background: #ecf5ff;
+}
+
+/* Section carrossel eventos
+--------------------------------*/
+
+#slider {
+    padding: 0;
+    overflow: hidden;
+    margin-left: 0;
+}
+
+.title-events-carousel {
+    margin-top: 20px;
+}
+
+.title-events-carousel h3 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #110729;
+}
+
+.description h4 {
+    color: #000000;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.description p {
+    color: #959597;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.btn-events {
+    background: #12378B;
+    color: #fff;
+    border-radius: 0px;
+    padding: 20px 20px;
+    margin-top: 15px;
+    letter-spacing: 1.8px;
+    font-weight: 900;
+}
+
+.btn-events img {
+    width: 15px;
+    margin-left: 40px;
+}
+
+a.carousel-control-prev, a.carousel-control-next {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+    border: 1px solid #000;
+}
+
+.carousel-control-next-icon {
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,.9)), url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' …3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e) !important;
+}
+
+/* override position and transform in 3.3.x */
+.carousel-inner .carousel-item.left.active {
+  transform: translateX(-30%) !important;
+}
+.carousel-inner .carousel-item.right.active {
+  transform: translateX(30%) !important;
+}
+
+.carousel-inner .carousel-item.next {
+  transform: translateX(30%) !important;
+}
+.carousel-inner .carousel-item.prev {
+  transform: translateX(-30%) !important;
+}
+
+.carousel-inner .carousel-item.right,
+.carousel-inner .carousel-item.left { 
+  transform: translateX(0) !important;
+}
+
+.carousel-control.left,.carousel-control.right {background-image:none;}
+
+img.img-slide-events {
+    width: auto;
+}
+
+.description {
+    margin-left: 60px !important;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* CSS Treinamentos */
+
+section#treinamentos {
+    margin-top: 70px;
+    background: #F8F9FB;
+}
+
+.events {
+    display: flex;
+    place-items: center;
+    margin-right: 0;
+    height: 398px;
+    background: #F8F9FB;
+}
+
+.col-md-6.second-slide {
+    margin-left: -100px;
+}
+
+div#carouselExampleControls {
+    margin-right: -85%;
+}
+
+#treinamentos p {
+    margin: 25px 0px;
+}
+
+.title-treinamentos h3 {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 100px 20px 0px;
+    line-height: 1.2;
+}
+
+.description-treinamentos p {
+    color: #000;
+    opacity: 0.4;
+    margin: 20px 0px 30px;
+}
+
+.btn-know {
+    background: #12378B;
+    width: 200px;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.btn-treinamentos {
+    box-shadow: 0 0 5px #c1c1c1;
+    border-radius: 100px;
+    width: 200px;
+    color: #12378B;
+    margin: 15px 0px;
+    background: #fff;
+    font-size: 18px;
+    font-family: "Poppins-Bold"
+}
+
+div#treinamentosCarousel {
+    margin-right: -30%;
+}
+
+#carousel-treinamentos a.carousel-control-prev, #carousel-treinamentos a.carousel-control-next {
+    margin-top: -45px;
+}
+
+.arrows {
+    float: right;
+  }
+
+.btn-align {
+    text-align: center !important;
+    margin-bottom: 20px;
+}
+
+.bg-yellow, .bg-green, .bg-blue, .bg-purple {
+    margin: 10px 10px;
+    max-width: 23.24%;
+}
+
+.bg-yellow .title-treinamentos {
+    background: #E8BE19;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+}
+
+.bg-yellow .row, .bg-green .row, .bg-blue .row, .bg-purple .row {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 5px #c1c1c1;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.bg-green .title-treinamentos {
+    background: #16A085;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+}
+
+.bg-blue .title-treinamentos {
+    background: #3498DB;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+}
+
+.bg-purple .title-treinamentos {
+    background: #8E44AD;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+}
+
+section#carousel-treinamentos {
+    overflow: hidden;
+    padding: 50px 0px;
+    background: #F8F9FB;
+}
+
+/* Seção Empresas Parceiras */
+
+.title-parceiros h1 {
+    color: #000;
+    text-align: center;
+}
+
+#empresas-parceiras {
+    padding: 50px 0;
+}
+
+.parceiros {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Carousel Testemonial */
+
+.carousel-indicators {
+    position: relative !important;
+}
+
+#depoimentos {
+    background: #fff;
+    color: #575758;
+    padding: 100px 0px 50px;
+    box-shadow: 0 0 5px #c1c1c1;
+}
+
+#depoimentos ol.carousel-indicators {
+    margin: 20px 0px;
+}
+
+.title-testemonial h1 {
+    text-align: center;
+    color: #575758;
+    letter-spacing: 2.88px;
+    font-weight: 899;
+}
+
+.title-testemonial p {
+    text-align: center;
+    margin: 20px 300px;
+    color: #575758;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.content-testemonial {
+    background: #fff;
+    margin: 20px 15px;
+    max-width: 47%;
+    padding: 30px;
+}
+
+.content-testemonial p {
+    margin: 15px 0px;
+    color: #333457;
+}
+
+.content-testemonial h4 {
+    color: #21223F;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.photo-testemonial img {
+    width: 150px;
+    padding: 0;
+}
+
+/* Form Information */
+
+#information {
+    background: #12378B;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0px 60px;
+}
+
+.form-ieg {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+    height: 60px;
+    color: #fff;
+    padding: 0 20px 0px 50px;
+}
+
+textarea#mensagem {
+    padding-top: 30px;
+}
+
+.contact-form .row {
+    margin: 0px 100px;
+}
+
+.form-control:focus {
+	background: transparent !important;
+}
+
+#information h1 {
+    margin-bottom: 30px;
+}
+
+.btn-information {
+    width: 200px;
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    padding: 10px 0;
+}
+
+.input-icons i { 
+    position: absolute; 
+} 
+          
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+          
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    margin-left: -200px;
+    margin-top: 20px;
+    opacity: 0.5;
+    left: 228px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+/* Footer Top */
+
+footer {
+    margin: 30px 0px;
+    padding: 50px 0px;
+    box-shadow: 0 0 5px #F6F7F8;
+}
+
+ul.social-icons {
+    padding: 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.colum-1 p, .colum-2 p, .colum-3 p {
+    margin-top: 10px;
+    color: #22262A;
+}
+
+.colum-1, .colum-2, .colum-3 {
+    padding-right: 70px;
+}
+
+.colum-2 h4, .colum-3 h4 {
+    color: #22262A;
+    margin-top: 20px;
+}
+
+/* Footer Bottom */
+
+#footer-two {
+    margin: 50px 0px 0px;
+}
+
+#footer-two .container {
+    border-top: 2px solid #F6F7F8;
+    padding-top: 40px;
+}
+
+.t-colum-1 h4, .t-colum-2 h4, .t-colum-3 h4, .t-colum-4 h4, .t-colum-5 h4, .t-colum-6 h4 {
+    color: #22262A;
+    font-weight: 900;
+}
+
+.t-colum-1 li, .t-colum-2 li, .t-colum-3 li, .t-colum-4 li, .t-colum-5 li, .t-colum-6 li {
+    color: #262626;
+    display: flex;
+    margin: 5px 0px;
+}
+
+footer a.scrollto.logo-ieg {
+    color: #0C0E41;
+}
+
+ul.menu-footer {
+    padding: 0;
+}
+
+ul.menu-footer a {
+    color: #262626;
+}
+
+/* ===================================
+           CSS PARA MOBILES 
+ ================================== */
+
+@media only screen and (min-width: 641px) {
+ .mobile {
+  display: none !important;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 999px) {
+	.icon {
+    padding: 10px;
+    min-width: 40px;
+    margin-left: -100px;
+    margin-top: 20px;
+    opacity: 0.5;
+	}
+}
+
+ /* Mobile Form */
+
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+  .mobile {
+    display: flex;
+  }
+
+ .contact-form {
+    margin: 0;
+    padding: 0;
+  }
+ .contact-form .row {
+    margin: 0px 20px;
+  }
+
+  .icon {
+    padding: 10px;
+    min-width: 40px;
+    margin-left: -135px;
+    margin-top: 25px;
+    opacity: 0.5;
+}
+
+/* Slide Events */
+
+  .title-events-carousel h3 {
+      text-align: center;
+  }
+
+  .arrows {
+    margin-bottom: 80px;
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  div#carouselExampleControls {
+    margin: 0;
+  }
+
+  img.img-slide-events {
+    width: 100%;
+    height: auto;
+  }
+
+  .description {
+    margin-left: 0 !important;
+    padding: 30px 50px 50px;
+  }
+
+  .carousel-item.slide-events {
+    width: auto !important;
+  }
+
+
+/* Slide Treinamentos */
+
+  #treinamentos .col-md-3 {
+      max-width: 50%;
+  }
+
+  .btn-treinamentos {
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    padding: 10px 0;
+  }
+
+  .bg-yellow, .bg-green, .bg-blue, .bg-purple {
+      margin: 10px;
+      max-width: 100%;
+  }
+
+  div#treinamentosCarousel {
+      margin-right: 0;
+  }
+
+/* Slide Testemonial */
+
+  .title-testemonial p {
+      margin: 0;
+  }
+
+  .desktop {
+    display: none;
+ }
+
+  .content-testemonial {
+    max-width: 100%;
+  }
+
+  .photo-testemonial {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+/* Footer Mobile */
+
+  #footer-two .col-md-2 {
+      max-width: 50%;
+      width: 50%;
+      flex: 0 0 50%;
+  }
+
+}
+
+/******* PÁGINA HOME *******/
+
+.banner-home {
+    background: url(img/bg-home.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+.b-home-slides {
+    text-align: center;
+    padding-top: 120px;
+    color: #fff;
+}
+
+.b-home-slides h6 {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.btn.slide-home {
+    width: 200px;
+    background: #FFC600;
+    border-radius: 4px;
+    opacity: 1;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Poppins-Bold"
+}
+
+#pq-estudar {
+    margin: 50px 0;
+}
+
+.title {
+    text-align: center;
+}
+
+#home #cursosemdestaque .title h1 {
+    margin-top: 50px !important;
+}
+
+.title h1 {
+    color: #000;
+}
+
+.title h6 {
+    letter-spacing: 0;
+    color: #737373;
+    line-height: 1.5;
+}
+
+.bloco-home {
+    margin: 20px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0px 15px 40px #0B094026;
+}
+
+.title-bloco {
+    color: #172541;
+}
+
+.text-bloco {
+    color: #495057;
+}
+
+.stars img {
+    width: 14px;
+}
+
+.bloco-cursos .title-bloco {
+    color: #000;
+    margin: 0;
+}
+
+.photo-cursos img {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 15px;
+}
+
+.bloco-cursos .text-bloco {
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.stars {
+    padding: 0px 35px;
+}
+.bloco-cursos .text-bloco, .bloco-cursos .title-bloco {
+    padding: 0px 20px;
+}
+
+.btn-comprar {
+    padding: 0px 20px;
+}
+
+.bloco-cursos {
+    box-shadow: 0 0 5px #c1c1c1;
+    padding: 0 0 15px;
+    margin: 30px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    -ms-flex: 0 0 27.1%;
+    flex: 0 0 28%;
+    max-width: 28%;
+}
+
+p.text-bloco {
+    min-height: 45px;
+    margin-bottom: 0;
+}
+
+.valor-curso {
+    color: #0C0E41;
+    line-height: 18px;
+}
+
+ins {
+    text-decoration: none;
+}
+
+.bloco-cursos li {
+    display: block;
+    margin-top: 5px;
+}
+
+.title-bloco a {
+    letter-spacing: 0.4px;
+    color: #000000;
+}
+
+.text-bloco a {
+    letter-spacing: 0.24px;
+    color: #000000;
+    opacity: 0.4;
+    padding: 0;
+    margin: 0;
+}
+
+.woocommerce .star-rating span::before {
+    content: "\53\53\53\53\53";
+    top: 0;
+    position: absolute;
+    left: 0;
+    color: #ffc100;
+}
+
+.buy {
+  width: 100%;
+  height: 37px;
+  background: #FBBB0D;
+  border: 0;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 37px;
+}
+
+.buy:hover {
+  color: #fff;
+}
+
+@media (max-width: 690px) {
+
+#cursosemdestaque .bloco-cursos {
+    width: 95% !important;
+    max-width: 100% !important;
+    flex-basis: auto;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+#page-consultoria .container-fluid {
+    width: 100%;
+    max-width: 100%;
+	}
+
+  .bloco-home {
+    max-width: 100%;
+    flex: 100%;
+  }
+
+  .b-home-slides {
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+/******* PÁGINA PESQUISA *******/
+
+.banner-pesquisa {
+    background: url(img/bg-pesquisa.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+/******* PÁGINA CONSULTORIA INTERNA *******/
+
+#solucoes-do-ieg {
+    margin-bottom: 70px;
+}
+
+.banner-consultoria-interna {
+    background: url(img/bg-consultoria-interna.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+#page-consultoria-interna .b-home-slides {
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+}
+
+#page-consultoria-interna .title img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#page-consultoria-interna #solucoes-ieg .title h6 {
+    text-align: center;
+}
+
+#page-consultoria-interna .title h6 {
+    text-align: left;
+}
+
+#solucoes-do-ieg .title h1 {
+    color: #000;
+    margin: 70px;
+}
+
+#page-consultoria-interna .bloco-solucoes, #page-pesquisa-interna .bloco-solucoes {
+    background: url(img/bg-solucoes-do-ieg.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    margin: 10px;
+    max-width: 31.5%;
+    padding: 130px 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#page-consultoria-interna .bloco-solucoes h5, #page-pesquisa-interna .bloco-solucoes h5 {
+    letter-spacing: 2px;
+}
+
+#home #empresas-parceiras {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 719px) {
+  #page-consultoria-interna .bloco-solucoes {
+    max-width: 100%;
+  }
+
+  #page-consultoria-interna .title h6 {
+    padding: 0;
+  }
+
+  #solucoes-do-ieg .title h1 {
+    color: #000;
+    margin: 50px 20px;
+  }
+
+  #consultoria-right, #consultoria-left {
+    padding: 0 30px;
+  }
+}
+
+/******* PÁGINA RELATÓRIOS E PUBLICAÇÕES *******/
+
+.banner-relatorios {
+    background: url(img/bg-relatorios-e-publicacoes.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+/******* PÁGINA CSC *******/
+
+.banner-csc {
+    background: url(img/bg-csc.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+/******* PÁGINA PESQUISA *******/
+
+#pra-voce .banner-home {
+    background: url(img/bg-pra-voce.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: ">";
+}
+
+input#txtBusca {
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: 1px solid #475677;
+    margin: 50px 0px 20px;
+    text-align: center;
+    max-width: 100%;  
+}
+
+.bg-sua-empresa-eventos-e-trainamentos {
+    background: url(img/sua-empresa-eventos.jpg) no-repeat 90% 50%;
+    background-size: auto;
+}
+
+.bg-sua-empresa-relatorios {
+    background: url(img/sua-empresa-relatorios.jpg) no-repeat no-repeat 10% 50%;
+    background-size: auto;
+}
+
+.bg-sua-empresa-csc {
+    background: url(img/sua-empresa-csc.jpg) no-repeat 90% 50%;
+    background-size: auto;
+}
+
+/******* PÁGINA PARA SUA EMPRESA *******/
+
+.banner-pra-sua-empresa {
+    background: url(img/bg-pra-sua-empresa.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+#page-pra-sua-empresa .b-home-slides h1 {
+    margin-top: 70px;
+}
+
+.pesquisa {
+    margin-bottom: 40px;
+    background: #FAFAFA;
+    padding: 100px 75px;
+    text-align: left;
+}
+
+.bg-pesquisa {
+    background: url(img/service-pesquisa.jpg) no-repeat 90% 45%;
+    background-size: auto;
+}
+
+h3.titles-sua-empresa {
+    text-align: left;
+    letter-spacing: 2.88px;
+    color: #110729;
+    font-weight: 900;
+}
+
+h6.subtitles-sua-empresa {
+    text-align: center;
+    letter-spacing: -0.48px;
+    color: #4B5981;
+}
+
+p.description-sua-empresa {
+    text-align: left;
+    letter-spacing: 0;
+    color: #495057;
+}
+
+.img-consultoria img {
+    width: 143%;
+    margin: 20px 0;
+}
+
+.consultoria {
+    margin: 40px 0px;
+    background: #FAFAFA;
+    padding: 100px 75px;
+    text-align: left;
+}
+
+.bg-consultoria {
+    background: url(img/service-consultoria.jpg) no-repeat 10% 50%;
+    background-size: auto;
+}
+
+.bg-eventos {
+    background: url(img/service-eventos.jpg) no-repeat 50% 45%;
+    background-size: auto;
+}
+
+.bg-relatorios {
+    background: url(img/service-relatorios.jpg) no-repeat 50% 45%;
+    background-size: auto;
+}
+
+.bg-csc {
+    background: url(img/service-csc.jpg) no-repeat 50% 45%;
+    background-size: auto;
+}
+
+#bloco-pesquisa, #bloco-consultoria, #bloco-eventos, #bloco-relatorios, #bloco-csc {
+    margin: 0px 0px 50px;
+}
+
+@media (max-width: 690px) {
+    input#txtBusca {
+    margin: 20px 0px;
+    }
+    
+    #depoimentos {
+    padding: 50px 0px 20px;
+    }
+    #information {
+    padding: 50px 0px 30px;
+    }
+    
+    footer {
+    margin: 0px 0px;
+    padding: 20px 0px;
+    }
+    
+    #footer-two {
+    margin: 0;
+    }
+}
+
+/* ======== CSS PAGE CONSULTORIA ========= */
+
+.banner-consultoria {
+    background: url(img/bg-home.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+#page-consultoria .b-home-slides h1 {
+    margin-top: 70px;
+}
+
+.blocos-consultoria img {
+    width: 100%;
+  }
+
+.blocos-consultoria {
+    padding: 0;
+}
+
+#solucoes-ieg {
+    margin: 70px 0;
+}
+
+#solucoes-ieg h6 {
+    padding: 0px 150px;
+}
+
+.content-consultoria h1 {
+    color: #000;
+    margin: 150px 100px 0;
+    font-weight: bold;
+}
+
+.content-consultoria p {
+    padding: 10px 100px 0;
+}
+
+.content-consultoria {
+    background: #FAFAFA;
+    text-align: left;
+}
+
+#page-consultoria .btn-events {
+    margin: 30px 100px 20px;
+    font-size: 18px;
+    font-family: "Poppins-Bold"
+}
+
+@media (max-width: 690px) {
+    #solucoes-ieg h6 {
+      padding: 0 20px;
+    }
+
+    .content-consultoria h1 {
+    margin: 0;
+    padding: 30px 30px 0px;
+    }
+
+    .content-consultoria {
+    margin-top: 15px;
+    border: 1px solid #dedede;
+    }
+
+    #pesquisas-csc .in-bloco-csc {
+    border-radius: 0 !important;
+   }
+
+    #pesquisas-csc .bloco-csc img {
+    width: 100% !important;
+    }
+
+    #page-consultoria .btn-events {
+      margin: 20px 30px 50px;
+    }
+
+    .btn-events {
+    	margin-bottom: 35px;
+    }
+
+    i.fa.fa-user.icon.name, i.fa.fa-comment.icon.message, .icon {
+      left: 160px !important;
+    }
+
+    #page-consultoria .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+    #solucoes-ieg {
+    margin: 70px 0 0px;
+  }
+}
+
+/* ======= CONTACT SOLUTION ======== */
+
+i.fa.fa-user.icon.name {
+    left: 228px;
+    margin-top: 22px;
+}
+
+i.fa.fa-comment.icon.message {
+    left: 228px;
+    margin-top: 33px;
+}
+
+/* ======== PAGE PESQUISA ======== */
+
+#page-pesquisas .content-consultoria p, #page-pesquisas .content-consultoria .btn {
+    margin: 20px 0px 10px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+#page-pesquisas .content-consultoria p {
+    text-align: left;
+    letter-spacing: 0.16px;
+    color: #000000;
+}
+
+.content-consultoria .btn-events {
+    margin-left: 100px !important;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+#page-pesquisas .b-home-slides h1 {
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 690px) {
+    #page-pesquisas .content-consultoria .btn {
+      margin: 10px 30px 40px;
+    }
+    
+    .content-consultoria p {
+    padding: 10px 30px 0;
+    }
+
+    .content-consultoria .btn-events {
+    margin-left: 30px !important;
+  }
+}
+
+/******* PAGE TREINAMENTO INTERNA *******/
+
+  .banner-treinamento-interna {
+    background: url(img/bg-treinamento-interna.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+  }
+
+  #page-treinamento-interna .b-home-slides h1, #page-pesquisa-interna .b-home-slides h1 {
+    margin-top: 70px;
+  }
+
+  .bg-treinamento-interno {
+    background: url(img/bg-treinamento-interno.jpg) no-repeat 50% 45%;
+  }
+
+  #page-treinamento-interna .pesquisa {
+    margin-bottom: 40px;
+    background: #FAFAFA;
+    padding: 50px 80px;
+  }
+
+  #our-numbers {
+    background: #F8F9FB;
+    padding: 50px 0px;
+  }
+
+  .numbers-title h1 {
+    color: #000000;
+  }
+
+  .numbers-title h6 {
+    text-align: left;
+    letter-spacing: 0;
+    color: #172541;
+    font-weight: 900;
+    margin: 0 0 10px;
+    font-family: "Poppins-Bold";
+    margin: 30px 0px;
+  }
+
+  .numbers-title p {
+    text-align: left;
+    letter-spacing: 0;
+    color: #495057;
+  }
+
+  .title p {
+    color: #737373;
+    padding: 0px 100px;
+  }
+
+  #page-treinamento-interna .title-parceiros p, #page-pesquisa-interna .title-parceiros p, #page-consultoria-interna .title-parceiros p {
+    text-align: center;
+    letter-spacing: 0;
+    color: #000000;
+    padding: 0px 250px;
+  }
+
+@media screen and (max-width: 719px) {
+
+    #page-treinamento-interna .pesquisa {
+    padding: 50px 30px;
+	}
+
+    .title p {
+    padding: 0px 30px;
+	}
+
+    #page-pagina-do-curso .pesquisa {
+    padding: 40px 30px !important;
+	}
+
+    .card-header .row .col-11 {
+    -ms-flex: 0 0 88.666667% !important;
+    flex: 0 0 88.666667% !important;
+    max-width: 88.666667% !important;
+	}
+
+    #page-pra-sua-empresa .pesquisa, #page-pra-sua-empresa .consultoria {
+    padding: 50px 20px;
+    margin: -55px 30px 130px 10px;
+	}
+}
+
+  /******* PÁGINA EVENTOS E TREINAMENTOS INTERNA *******/
+
+.next-event {
+    padding: 70px 0px 0px;
+}
+
+.banner-evtr-interna .container-fluid {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.no-padding {
+    padding: 0;
+    margin: 0;
+}
+
+#contagem {
+  color: #fff;
+  background: #1552BD;
+}
+
+.box-date {
+    border: 1px solid #FFFFFF;
+    width: 110px;
+    height: 95px;
+    margin: 30px 10px 0px;
+}
+
+.title-countdown {
+    text-align: center;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+.place-center {
+    place-content: center;
+}
+
+.date-number {
+    margin-top: 10px;
+}
+
+.current-timer {
+    margin-top: -20px;
+    }
+
+.btn-countdown {
+    width: 240px;
+    border: 2px solid #FFFFFF;
+    border-radius: 0px;
+    color: #fff;
+    margin: 50px 20px;
+}
+
+.btn-countdown:hover {
+    background: #fff;
+    color: #1552BD;
+}
+
+.banner-evtr-interna {
+    background: url(img/bg-eventos-e-treinamentos.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+}
+
+.background-black {
+    padding: 30px 0;
+    margin: 50px 0 0;
+    background: #00000080;
+    text-align: center;
+}
+
+#page-evtr-interna .b-home-slides {
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+}
+
+#page-evtr-interna .title img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#page-evtr-interna #sobre-o-evento h6 {
+    text-align: center;
+    padding: 0px 60px 30px;
+}
+
+#page-evtr-interna .title h6 {
+    text-align: left;
+}
+
+#page-evtr-interna .title h1 {
+    color: #000;
+    margin: 70px 70px 20px;
+}
+
+#page-evtr-interna td.title {
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+#page-evtr-interna .bloco-solucoes {
+    background: url(img/bg-solucoes-do-ieg.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    margin: 10px;
+    max-width: 31.5%;
+    padding: 130px 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#page-evtr-interna .bloco-solucoes h5 {
+    letter-spacing: 2px;
+}
+
+.btn-green {
+    padding: 20px 50px;
+    width: 200px;
+    background: #27AE60 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    color: #fff;
+}
+
+.btn-yellow {
+    background: #FFC600 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    color: #fff;
+    padding: 20px 30px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+.btn-green:hover {
+    background: #12793d 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    color: #fff;
+}
+
+.background-black .btn-green {
+    float: right;
+}
+
+.btn-yellow:hover {
+    background: #cea001 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    color: #fff;
+}
+
+.background-black .btn-yellow {
+    float: left;
+}
+
+#courses {
+    margin: 50px 0px;
+}
+
+#outros-eventos {
+    margin: 65px 0px 0px;
+}
+
+.programacao, .palestrantes {
+    width: 683px;
+    height: 569px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.palestrantes {
+    background: url(img/bg-conheca-os-palestrantes.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+}
+
+.programacao {
+    background: url(img/bg-ver-programacao.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+}
+
+.title-patrocinadores {
+    text-align: center;
+    letter-spacing: 2px;
+    color: #110729;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.premium, .master, .startups {
+    margin: 15px 0px;
+}
+
+#patrocinadores .title {
+    text-align: center;
+    font: Bold 36px/59px Poppins;
+    letter-spacing: 0;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+#patrocinadores {
+    margin: 70px 0px;
+}
+
+.imgs-logos {
+    margin: 15px 80px;
+}
+
+#empresas-participantes .title {
+    text-align: center;
+    font: Bold 36px/59px Poppins;
+    letter-spacing: 0;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+#empresas-participantes {
+    margin: 20px 0px 70px;
+}
+
+#page-evtr-interna #slider {
+    margin: 10px 0px 70px;
+}
+
+#photo-event img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.photo-col4-top{
+    padding: 0px 10px;
+    margin: 0px -10px 0px 5px;
+}
+
+.photo-col8-lateral {
+    padding: 0px 15px;
+    margin-left: 5px;
+}
+
+.photo-col4 {
+    padding: 0 10px;
+    margin: 6px -5px;
+}
+
+.photo-col8 {
+    margin: 5px 0;
+}
+
+#photo-event {
+    padding: 80px 150px;
+    text-align: center;
+    background: #F8F9FB;
+}
+
+#photo-event .btn-blue {
+    margin-top: 40px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+#photo-event h1 {
+    letter-spacing: 0;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.img-edition img {
+    width: 100%;
+}
+
+.txt-edit {
+    background: #12378B 0% 0% no-repeat padding-box;
+    text-align: center;
+    color: #f8f8f8;
+    padding: 30px 0px 10px;
+    text-transform: uppercase;
+}
+
+#prev-event {
+    background: url(img/bg-eventos-e-treinamentos.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+    padding: 0px 0px 50px;
+}
+
+#prev-event .container-fluid {
+    width: 100%;
+    max-width: 100%;
+}
+
+.btn-edition {
+    margin-top: 65px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+.logo-participantes{ 
+  margin: 15px 0px;
+}
+
+.logo-participantes img {
+    width: 100%;
+}
+
+@media screen and (max-width: 719px) {
+  #page-evtr-interna .bloco-solucoes {
+    max-width: 100%;
+  }
+
+  #page-evtr-interna .title h6 {
+    padding: 0;
+  }
+
+  #solucoes-do-ieg .title h1 {
+    margin: 50px 0px;
+  }
+
+  #photo-event {
+    padding: 50px 20px;
+  }
+
+  #page-evtr-interna .title h1 {
+    margin: 20px 0 0;
+  }
+
+  .btn-responsive {
+      display: flex;
+      place-content: center;
+      margin-top: 10px;
+  }
+
+  .imgs-logos {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+    text-align: center;
+  }
+
+  .logo-participantes {
+    text-align: center;
+  }
+
+  .btn-edition {
+    margin: 15px 0 0;
+  }
+
+  .programacao, .palestrantes {
+    width: 100%;
+    height: 300px;
+  }
+
+  .banner-evtr-interna .container-fluid {
+    margin-right: auto !important;
+    margin-left: auto !important; 
+  }
+
+  .background-black {
+    margin: 50px -15px 0;
+  }
+
+  #prev-event .img-edition {
+    margin-top: 0;
+    margin-bottom: -45px;
+  }
+
+  .img-edition img {
+    margin: 50px 0px 50px;
+  }
+
+  .txt-edit h1 {
+    padding: 0px 40px;
+  }
+
+  #page-evtr-interna #sobre-o-evento h6 {
+    padding: 20px 15px 30px;
+  }
+
+  #page-evtr-interna .row {
+    margin: 0;
+  }
+}
+
+/* ====== CSS PÁGINA CONTATO ====== */
+
+#bg-contato {
+    background: url(img/bg-contato.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    padding: 130px 30px;
+    text-align: center;
+    color: #fff;
+  }
+
+  #bg-contato .b-home-slides {
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+}
+
+#banner-contato {
+    margin: 80px 0px;
+}
+
+.txt-contato {
+    padding: 140px 65px;
+    background: #12378B;
+    color: #fff;
+}
+
+.padding-left-contact {
+    margin: 0 90px 0 0;
+}
+
+.txt-contato p {
+    line-height: 1.4;
+}
+
+.btn-blue {
+    background: #12378B;
+    color: #fff;
+    padding: 20px 60px;
+    margin-top: 15px;
+  }
+
+.btn-blue:hover {
+    background: #cac6c6;
+    box-shadow: 0 4px 11px #d2d2d2;
+    color: #12378B;
+    padding: 20px 60px;
+    margin-top: 15px;
+  }
+
+#banner-contato .btn-send {
+    text-align-last: center;
+}
+
+#info-contacts h6 {
+    letter-spacing: 0;
+    color: #172541;
+}
+
+#info-contacts p {
+    letter-spacing: 0;
+    color: #495057;
+}
+
+#info-contacts {
+    background: #FAFAFA;
+    padding: 100px 0px;
+}
+
+#page-contato option {
+    color: #5C5C5C;
+}
+
+#page-contato .form-control:focus {
+    color: #5C5C5C;
+    background-color: #fff;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+#page-trabalhe-conosco .form-control:focus {
+    color: #5C5C5C;
+}
+
+@media (max-width: 719px) {
+  .padding-left-contact {
+    margin: 0 0 20px;
+  }
+
+  .txt-contato {
+    padding: 40px !important;
+  }
+
+  #banner-contato {
+    margin: 30px 0px;
+  }
+
+  #our-numbers .col {
+    flex: 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  #empresas-parceiras {
+    padding: 30px 0;
+  }
+
+  #our-numbers {
+    padding: 30px 0px;
+  }
+
+  #pq-estudar {
+    margin: 30px 0 0;
+  }
+
+  #bloco-pesquisa, #bloco-consultoria, #bloco-eventos, #bloco-relatorios, #bloco-csc {
+    margin: 0;
+  }
+
+  #form-trabalhe-conosco {
+    margin: 0 !important;
+  }
+
+  #page-trabalhe-conosco .contact {
+    margin: 0px 0px 30px !important;
+  }
+
+  #valores-tc {
+    margin-top: -240px !important;
+  }
+
+  .firs-txt {
+    text-align: center;
+    padding: 20px 30px 0 !important;
+  }
+}
+
+/* ====== CSS PÁGINA TRABALHE CONOSCO ====== */
+
+.banner-trabalhe-conosco {
+    background: url(img/bg-trabalhe-conosco.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 470px;
+    text-align: center;
+    color: #fff;
+  }
+
+  #page-trabalhe-conosco .b-home-slides h1 {
+    padding-top: 75px;
+}
+
+.firs-txt {
+    text-align: center;
+    padding: 50px 70px;
+}
+
+#page-trabalhe-conosco .btn-send {
+    text-align: -webkit-center;
+}
+
+#page-trabalhe-conosco .contact {
+    margin: 40px 0px;
+}
+
+#valores {
+    padding: 70px 0px 200px;
+    background: #F8F9FB;
+}
+
+#valores-tc {
+    margin-top: -200px;
+}
+
+#form-trabalhe-conosco {
+    margin: 50px 0px 20px;
+}
+
+/* CSS PÁGINA PESQUISA INTERNA */
+
+#relatorios {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+    padding: 50px 0;
+}
+
+.img-relatorios img {
+    width: 100%;
+    padding: 60px;
+}
+
+#relatorios .txt-relatorios {
+    padding: 80px;
+    text-align: left;
+} 
+
+#relatorios .title h3 {
+    letter-spacing: 0;
+    color: #000000;
+}
+
+#relatorios .title h6 {
+    letter-spacing: 0.16px;
+    color: #000000;
+    margin-top: -20px;
+  }
+
+  #relatorios .btn-blue {
+    margin-top: -10px;
+}
+
+#page-pesquisa-interna #loren {
+    padding: 50px 120px;
+}
+
+#page-pesquisa-interna #loren h6 {
+    text-align: left;
+    margin-top: 10px;
+}
+
+#page-pesquisa-interna #empresas-parceiras {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+}
+
+.banner-pesquisa-interna{
+    background: url(img/bg-pesquisa-interna.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+.objetivo, .importancia {
+    padding: 50px 150px;
+}
+
+.objetivo .title h6, .importancia .title h6 {
+    text-align: left;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.objetivo .title h3, .importancia .title h3 {
+    text-align: right;
+    letter-spacing: 2px;
+    color: #110729;
+    padding-right: 60px;
+}
+
+/* ============== RESPONSIVIDADE ============= */
+
+@media screen and (max-width: 719px) {
+
+  #page-pesquisa-interna #loren {
+    padding: 50px 0px !important;
+  }
+
+  #page-pesquisa-interna #loren img {
+    width: 100%;
+  }
+
+  .img-relatorios img {
+    padding: 50px 15px 10px;
+  }
+
+  .objetivo, .importancia {
+    padding: 50px 15px;
+  }
+
+  .objetivo .title h3, .importancia .title h3 {
+    text-align: center;
+    padding: 0;
+  }
+
+  .objetivo .title h6, .importancia .title h6 {
+    text-align: center;
+  }
+
+  #page-consultoria-interna .bloco-solucoes, #page-pesquisa-interna .bloco-solucoes {
+    max-width: 100%;
+  }
+
+  #page-treinamento-interna .title-parceiros p, #page-pesquisa-interna .title-parceiros p, #page-consultoria-interna .title-parceiros p  {
+    padding: 0px 15px;
+  }
+
+  #relatorios .txt-relatorios {
+    padding: 0px 30px 50px;
+  }
+}
+
+
+/* ========= PÁGINA DE CURSOS ======== */
+
+#banner-pagina-do-curso .btn-yellow {
+    margin-top: 20px;
+}
+
+#page-pagina-do-curso #banner-pagina-do-curso .b-home-slides {
+  padding-top: 150px;
+}
+
+#page-pagina-do-curso #banner-pagina-do-curso {
+  background-size: cover;
+  background-position: top;
+  height: 464px;
+}
+
+#page-pagina-do-curso .bg-treinamento-interno {
+    background: url(img/pagina-de-cursos.jpg) no-repeat 50% 45%;
+}
+
+@media (max-width: 690px) {
+  #page-pagina-do-curso .bg-treinamento-interno {
+    background: none;
+  }
+}
+
+#metodologia {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+    padding: 50px 0px;
+}
+
+.cursos {
+    padding: 0;
+    box-shadow: 0 0 10px #c1c1c1;
+    margin: 0 90px;
+}
+
+#page-pagina-do-curso .photo-cursos {
+    padding: 0;
+}
+
+.price {
+    text-align: left;
+    letter-spacing: 0;
+    color: #110729;
+  }
+ 
+#metodologia .price {
+    font-weight: 900;
+    margin: 5px 20px;
+}
+
+#page-pagina-do-curso .cursos .text-bloco {
+  text-align: left;
+  letter-spacing: 0;
+  color: #000000;
+  padding: 0 20px;
+}
+
+.price {
+  margin: 5px 20px;
+}
+
+.parcel-price {
+  margin: -10px 20px 10px;
+  text-align: left;
+  letter-spacing: 0;
+  color: #110729;
+}
+
+#page-pagina-do-curso .cursos .btn-blue {
+    background: #12378B;
+    color: #fff;
+    padding: 15px 15px;
+    margin: 10px 20px;
+}
+
+#page-pagina-do-curso .cursos .btn-blue:hover {
+    background: #cac6c6;
+    color: #12378B;
+    box-shadow: 0 4px 11px #d2d2d2;
+}
+
+#banner-pagina-do-curso .fa, #banner-pagina-do-curso li {
+    color: #fff;
+}
+
+#metodologia .title p {
+    text-align: left;
+    letter-spacing: 0;
+    color: #737373;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+#metodologia .title h1 {
+    letter-spacing: 0;
+    color: #000000;
+    font-weight: 900;
+    text-align: left;
+}
+
+#metodologia .title h3 {
+    text-align: left;
+    letter-spacing: 0;
+    color: #172541;
+    font-weight: 900;
+}
+
+#metodologia .title h6 {
+    text-align: left;
+    letter-spacing: 0;
+    color: #495057;
+    margin-bottom: 20px 0px;
+}
+
+.to-know li {
+    text-align: left;
+    letter-spacing: 0;
+    color: #495057;
+    display: block;
+    margin: 10px 0px;
+}
+
+#materias {
+  padding: 80px 0px;
+}
+
+#materias .title h1 {
+    text-align: left;
+}
+
+#materias ul {
+  padding: 0px;
+}
+
+#materias .title {
+    padding-right: 150px;
+}
+
+/* SECTION Professores */
+
+#professores {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+    padding: 80px 0px;
+}
+
+#professores .title h6 {
+    padding: 0px 230px;
+}
+
+.teacher {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #7070704D;
+    max-width: 27%;
+    margin: 10px 35px;
+    padding: 40px 20px;
+}
+
+.teacher h3 {
+    color: #21223F;
+    margin: 10px 0 10px 0;
+}
+
+.teacher h6 {
+    color: #333457;
+    margin: 0px 0 5px 0;
+}
+
+.teacher img {
+    width: 50%;
+}
+
+#professores {
+    text-align: center;
+}
+
+.social-icon img {
+    width: 16px;
+    margin-top: 5px;
+}
+
+.social-icon {
+    display: flex;
+    place-content: space-around;
+}
+
+#perguntas-frequentes .btn-link {
+    color: #172541;
+    text-align: left;
+}
+
+#perguntas-frequentes .btn-link:hover {
+    text-decoration: none;
+    color: #113589;
+}
+
+#perguntas-frequentes {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+    padding: 100px 0px;
+}
+
+#perguntas-frequentes .title h1 {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#perguntas-frequentes h6 {
+    color: #FFFFFF;
+}
+
+#perguntas-frequentes .txt-contato {
+    padding: 40px 65px;
+    background: #12378B;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.btn-white {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    padding: 15px 17px;
+    width: 200px;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+}
+
+.fa-angle-down {
+    margin:0;
+    font-size: 30px;
+}
+
+#investiment {
+    padding: 150px 0px;
+}
+
+.icons-cursos li {
+    display: inline;
+    margin-right: 35px;
+    margin-top: 20px;
+}
+
+.banner-consultoria-interna .b-home-slides h1 {
+    padding: 0px 150px;
+}
+
+#page-pagina-do-curso .pesquisa {
+    padding: 80px 75px;
+}
+
+/* =========== RESPONSIVIDADE =========== */
+
+@media screen and (max-width: 719px) {
+  #page-pagina-do-curso #banner-pagina-do-curso .b-home-slides {
+    padding-top: 40px;
+  }
+
+  .cursos {
+    margin: 20px 0px 0px;
+  }
+
+  #perguntas-frequentes .btn-link {
+    font-size: 18px;
+    margin-left: -10px;
+  }
+
+  .fa-angle-down {
+    margin-left: -15px;
+  }
+
+  .teacher {
+    max-width: 100%;
+  }
+
+  #professores .title h6 {
+    padding: 0px 20px;
+  } 
+
+  #materias .title {
+    padding: 0 20px;
+  }
+
+  #investiment {
+      padding: 50px 0px;
+  }
+
+  .icons-cursos li {
+    display: block;
+    margin-right: 34px !important;
+  }
+
+  .banner-consultoria-interna .b-home-slides h1 {
+    padding: 0px 20px;
+    margin-top: -70px;
+  }
+}
+
+/********* CSS PAGE CSC MODELO ********/
+
+  .banner-csc-modelo {
+    background: url(img/bg-csc-modelo.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+  }
+
+  #page-csc-modelo .b-home-slides h1 {
+    margin-top: 70px;
+  }
+
+#info-csc img {
+    width: 100%;
+}
+
+.box-detals-csc {
+    box-shadow: 0 0 14px #c3c3c3;
+    padding: 70px 110px 0px 150px;
+    margin-left: -127px;
+    margin-top: -50px;
+    border-radius: 25px;
+    z-index: -1;
+    height: 512px;
+}
+
+#info-csc h4 {
+    text-align: left;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+#info-csc p {
+    letter-spacing: 0;
+    color: #000000;
+    line-height: 1.3;
+    margin: 5px 0;
+}
+
+#info-csc span {
+    text-align: left;
+    letter-spacing: 0;
+    opacity: 0.61;
+}
+
+#info-csc {
+    margin: 120px 0px;
+}
+
+/* ===== CSS PAGE CSC ===== */
+
+#description-about {
+    padding: 70px;
+}
+
+#sobre .b-home-slides {
+    padding-top: 200px;
+  }
+
+  #about-visao .col-md-3 {
+    max-width: 33%;
+    flex: 33%;
+}
+
+.bloco-esquerda, .bloco-direita {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 15px 40px #00000029;
+    border-radius: 20px;
+    padding: 80px 70px;
+    height: 345px;
+    margin-top: -110px;
+    max-width: 31%;
+}
+
+.bloco-esquerda {
+    margin-right: -120px;
+    z-index: 1;
+    margin-left: 40px;
+}
+
+.bloco-direita {
+    margin-left: -40px;
+    z-index: 1;
+}
+
+.bloco-foto {
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    max-width: 37%;
+}
+
+.bloco-foto img {
+    width: 100%;
+}
+
+#about-missao, #about-visao, #about-valores {
+    padding: 80px 0;
+}
+
+#about-visao .bloco-foto {
+    margin-left: 40px;
+    margin-right: -65px;
+}
+
+.bloco-esquerda h4, .bloco-direita h4 {
+    color: #000;
+}
+
+.bloco-esquerda p, .bloco-direita p {
+    color: #000;
+}
+
+.bloco-historia {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 15px 40px #00000029;
+    border-radius: 20px;
+    height: 260px;
+    margin-left: -170px;
+    padding: 50px;
+    display: flex;
+    place-self: center;
+    flex: 65%;
+    max-width: 65%;
+}
+
+.bloco-historia h2 {
+  letter-spacing: 0;
+  color: #000306;
+  text-align: center;
+}
+
+.bloco-historia p {
+  letter-spacing: 0;
+  color: #495057;
+  text-align: center;
+}
+
+.carousel-historia {
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 0;
+    height: 650px;
+}
+
+#nossa-historia {
+    padding: 50px 0 80px;
+}
+
+@media (max-width: 690px) {
+  #nossa-historia {
+    padding: 0 !important;
+  }
+
+  #escola-de-negocios {
+    padding: 20px 0 20px !important;
+  }
+  
+  #consultoria-about {
+    padding: 0 0 30px !important;
+  }
+}
+
+.bloco-escola-de-negocios {
+    background: #12378BE6 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 40px;
+    color: #fff;
+    margin-top: -80px;
+    margin-left: -310px;
+    max-width: 44%;
+    flex: 44%;
+    padding: 75px;
+}
+
+.bloco-escola-de-negocios h5 {
+    color: #fff;
+}
+
+.bloco-escola-de-negocios p {
+    line-height: 1.7;
+}
+
+#escola-de-negocios {
+    padding: 200px 0 80px;
+}
+
+.bloco-pesquisa-about {
+    background: #000000CC 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 40px;
+    color: #fff;
+    margin-top: -65px;
+    margin-right: -310px;
+    max-width: 44%;
+    flex: 44%;
+    padding: 75px;
+    height: 100%;
+    z-index: 1;
+}
+
+#pesquisa-about {
+    padding: 80px 0;
+}
+
+.bloco-consultoria-about {
+    background: #12378BE6 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 40px;
+    color: #fff;
+    margin-top: -65px;
+    margin-left: -310px;
+    max-width: 44%;
+    flex: 44%;
+    padding: 75px;
+    height: 100%;
+}
+
+#consultoria-about {
+    padding: 80px 0;
+}
+
+#engenharia-de-gestao {
+    padding: 30px 0;
+}
+
+.txt-engenharia-de-gestao {
+    margin-top: -325px;
+    text-align: center;
+    color: #fff;
+}
+
+.bloco-color1 {
+  background: #071D42 0% 0% no-repeat padding-box;
+}
+
+.bloco-color2 {
+  background: #5480CC 0% 0% no-repeat padding-box;
+}
+
+.bloco-color3 {
+  background: #1B2A42 0% 0% no-repeat padding-box;
+}
+
+.bloco-color4 {
+  background: #6B88B6 0% 0% no-repeat padding-box;
+}
+
+.bloco-color5 {
+  background: #4C5974 0% 0% no-repeat padding-box;
+}
+
+.bloco-color6 {
+  background: #303942 0% 0% no-repeat padding-box;
+}
+
+.bloco-engenharia-de-gestao {
+    border-radius: 18px;
+    margin: 0 40px 0;
+    max-width: 26.2%;
+    flex: 26.2%;
+    padding: 50px;
+    text-align: -webkit-center;
+    color: #fff;
+}
+
+.bloco-engenharia-de-gestao h6 {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.bloco-engenharia-de-gestao img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.bloco-engenharia-de-gestao img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.bloco-engenharia-de-gestao p {
+    line-height: 1.3;
+    padding: 0 20px;
+    margin-bottom: 0;
+}
+
+#engenharia-de-gestao {
+
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -60px;
+}
+#quote-carousel .carousel-control.right {
+    right: -60px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-top: 5px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+    background: url(./img/indicators-sobre.jpg) no-repeat center !important;
+    background-size: cover;
+}
+
+#quote-carousel .carousel-indicators .active {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    opacity: 1;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.carousel-historia ul.carousel-indicators {
+    margin: 0;
+    padding: 0;
+    height: 75px;
+}
+/* ======= CSS PAGE RELATORIOS E PUBLICAÇÕES ======= */
+
+.banner-relatorios-e-publicacoes {
+    background: url(img/bg-relatorios-e-publicacoes.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+#page-relatorios-e-publicacoes .b-home-slides h1 {
+    margin-top: 70px;
+}
+
+@media (max-width: 690px) {
+  .container {
+    padding: 15px;
+  }
+
+  #description-about {
+    padding: 70px 0;
+  }
+
+  .bloco-esquerda, .bloco-direita {
+    padding: 30px;
+    height: 100%;
+    max-width: 50%;
+  }
+
+  .bloco-foto {
+    max-width: 65%;
+    margin-left: 0px;
+  }
+
+  .bloco-direita {
+    margin-left: 35px;
+    z-index: 1;
+    margin-top: -320px;
+  }
+
+  #about-visao .bloco-foto {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+
+  .bloco-historia {
+    height: 100%;
+    margin-left: 15px;
+    padding: 50px;
+    flex: 95%;
+    max-width: 95%;
+  }
+
+  #quote-carousel .carousel-indicators li {
+    width: 40px;
+    height: 35px;
+    margin: 0 5px;
+  }
+
+  .bloco-engenharia-de-gestao {
+    margin: 10px;
+    max-width: 27.8%;
+    flex: 27.8%;
+    padding: 14px;
+  }
+
+  .txt-engenharia-de-gestao {
+    margin-top: -110px;
+  }
+
+  .txt-engenharia-de-gestao h3 {
+    margin-bottom: 5px;
+  }
+
+  .bloco-engenharia-de-gestao p {
+    padding: 0;
+  }
+
+  .bloco-escola-de-negocios {
+    margin-top: -80px;
+    margin-left: 15px;
+    max-width: 100%;
+    flex: 100%;
+    padding: 25px 35px;
+  }
+
+  .carousel-historia {
+    height: 100%;
+  }
+
+  .bloco-pesquisa-about {
+    margin-top: -65px;
+    margin-right: 0;
+    margin-left: 10px;
+    margin-bottom: -44px;
+    max-width: 100%;
+    flex: 100%;
+    padding: 20px 35px;
+  }
+
+  .bloco-consultoria-about {
+    margin-left: 10;
+    max-width: 100%;
+    flex: 100%;
+    padding: 20px 35px;
+    height: 100%;
+  }
+}
+/* ====== PAGE PESQUISA INTERNA ====== */
+
+#estudos-realizados h1, #pesquisa-resultados h1 {
+    text-align: center;
+    color: #000;
+}
+
+#estudos-realizados {
+    background: #F8F9FB 0% 0% no-repeat padding-box;
+    padding: 70px 0px;
+}
+
+.btn-black-radiusl {
+    border-radius: 6px 0px 0px 6px;
+    border: 1px solid #000000;
+	margin-right: -2px;
+	width: auto;
+    font-family: "Poppins-Bold";
+	text-transform: uppercase;
+	background: #fff;
+}
+
+.btn-black-radiusr {
+	border: 1px solid #000000;
+	border-radius: 0px 6px 6px 0px;
+	opacity: 1;
+	margin: 0;
+	width: auto;
+    font-family: "Poppins-Bold";
+	text-transform: uppercase;
+	background: #fff;
+}
+
+.btn-black {
+	border: 1px solid #000000;
+	border-radius: 0;
+	opacity: 1;
+	margin-right: -2px;
+	width: auto;
+    font-family: "Poppins-Bold";
+	text-transform: uppercase;
+	background: #fff;
+}
+
+.btn-black:focus, .btn-black-radiusl:focus, .btn-black-radiusr:focus, .btn-black:hover, .btn-black-radiusl:hover, .btn-black-radiusr:hover, .btn-black:active, .btn-black-radiusl:active, .btn-black-radiusr:active {
+    outline: 0;
+    box-shadow: none;
+    background: #000;
+    color: #fff;
+}
+
+.buttons-pesquisa-interna {
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+#page-pesquisa-interna #estudos-realizados .card-body {
+    width: 975px !important;
+    height: 236px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.24px;
+    padding: 50px;
+    display: flex;
+}
+
+.align-center {
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+#pesquisa-resultados {
+    padding: 70px 0px;
+}
+
+#pesquisa-resultados .card {
+    border: none;
+    width: 975px !important;
+    height: 236px;
+}
+
+.rd-relatorios, .rd-videos {
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 30px;
+    color: #fff;
+    text-align-last: center;
+    padding: 0;
+    box-shadow: 0 0 5px #C3C3C3;
+}
+
+.txt-bot {
+    background: #fff;
+    color: #000;
+    margin-top: 35px;
+    padding: 10px;
+}
+
+.rd-relatorios img, .rd-videos img {
+    padding: 30px 0px;
+    margin-top: 30px;
+}
+
+/* CSS PÁGINA RELATÓRIOS E PUBLICAÇÕES INTERNA */
+
+#apresentacao .objetivo .title h3 {
+    text-align: left;
+    letter-spacing: 2px;
+    color: #110729;
+    padding-right: 60px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+#capitulos {
+    background: #1F1F1F 0% 0% no-repeat padding-box;
+    color: #fff;
+    text-align: center;
+    padding: 70px 0px;
+}
+
+#capitulos .btn-black-radiusl {
+    border-radius: 6px 0px 0px 6px;
+    border: 1px solid #fff;
+  margin-right: -2px;
+  text-transform: uppercase;
+  background: #1F1F1F;
+  color: #fff;
+}
+
+#capitulos .btn-black-radiusr {
+  border: 1px solid #fff;
+  border-radius: 0px 6px 6px 0px;
+  opacity: 1;
+  margin: 0;
+  text-transform: uppercase;
+  background: #1F1F1F;
+  color: #fff;
+}
+
+#capitulos .btn-black {
+  border: 1px solid #fff;
+  border-radius: 0;
+  opacity: 1;
+  margin-right: -2px;
+  text-transform: uppercase;
+  background: #1F1F1F;
+  color: #fff;
+}
+
+#capitulos .btn-black:focus, #capitulos .btn-black-radiusl:focus, #capitulos .btn-black-radiusr:focus, #capitulos .btn-black:hover, #capitulos .btn-black-radiusl:hover, #capitulos .btn-black-radiusr:hover, #capitulos .btn-black:active, #capitulos .btn-black-radiusl:active, #capitulos .btn-black-radiusr:active {
+    outline: 0;
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+}
+
+#capitulos .card-body {
+    background: none;
+    border: 2px solid;
+    margin-top: 20px;
+    padding: 50px 20px;
+    width: 974px;
+}
+
+#capitulos h1 {
+    margin-bottom: 50px;
+}
+
+#page-relatorios-e-publicacoes-interna .bloco-solucoes {
+    background: url(img/bg-solucoes-do-ieg-relatorios.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    margin: 10px;
+    max-width: 31.5%;
+    padding: 130px 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#page-relatorios-e-publicacoes-interna .bloco-solucoes h5 {
+    letter-spacing: 2px;
+}
+
+#page-relatorios-e-publicacoes-interna .b-home-slides {
+    padding-top: 200px;
+}
+
+/* PÁGINA CSC */
+
+.banner-csc {
+    background: url(img/bg-csc-modelo.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    height: 464px;
+}
+
+#page-csc .b-home-slides h1 {
+    margin-top: 70px;
+}
+
+#page-csc .background-black {
+    color: #fff;
+    background: #000;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px !important;
+
+}
+
+.bloco-csc {
+    padding: 0;
+    margin: 25px;
+    width: 33%;
+}
+
+.bloco-csc h4 {
+    font-family: "Poppins-SemiBold";
+}
+
+.bloco-csc img {
+  width: 100%;
+}
+
+.bloco-csc .row {
+  margin: 0;
+  padding: 0;
+}
+
+.list-csc b {
+    font-family: "Poppins-Bold";
+    color: #000;
+    font-size: 20px;
+}
+
+.in-bloco-csc {
+  padding: 0 !important;
+  border-radius: 10px 10px 0px 0px !important;
+  overflow: hidden;
+}
+
+#events-csc {
+  background: #F8F9FB;
+  text-align: center;
+  padding: 70px 0px;
+}
+
+.bloco-csc h3 {
+    text-align: center;
+}
+
+#pesquisas-csc .bloco-csc img {
+    box-shadow: 3px 5px 5px #95949482;
+    width: 98.5%;
+    margin-bottom: 35px;
+}
+
+#pesquisas-csc .in-bloco-csc {
+  border-radius: 0 !important;
+}
+
+#pesquisas-csc .bloco-csc h3 {
+    text-align: center;
+    letter-spacing: 0.48px;
+    color: #0000008f;
+}
+
+#pesquisas-csc .btn-black, #consultoria-csc .btn-black {
+  background: #000;
+  color: #fff;
+  width: 326px;
+  border-radius: 6px;
+}
+
+#pesquisas-csc .btn-black:hover, #consultoria-csc .btn-black:hover  {
+  background: #000000d9;
+  color: #fff;
+}
+
+#pesquisas-csc {
+  padding: 80px 0px;
+}
+
+#rp-csc {
+  background: #000000CC 0% 0% no-repeat padding-box;
+  color: #fff;
+  padding: 90px 0;
+}
+
+#rp-csc h4 {
+  margin: 0px 0 0;
+}
+
+#rp-csc p {
+  margin: 0px 0 30px;
+}
+
+#rp-csc h1 {
+ margin-bottom: 50px;
+}
+
+#rp-csc .btn-white, #treinamentos-csc .btn-white {
+  width: 326px;
+  height: 76px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  letter-spacing: 0.29px;
+  margin-top: 50px;
+}
+
+#consultoria-csc {
+    padding: 100px 0px;
+}
+
+#consultoria-csc .btn-black {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
+  margin-top: 22px;
+}
+
+#consultoria-csc .btn-black:hover  {
+  background: #000000d9;
+  color: #fff;
+}
+
+.consult-csc-txt h6 {
+  text-align: left;
+  color: #000000;
+}
+
+.consult-csc-txt p {
+  text-align: left;
+  color: #000000;
+}
+
+.consult-csc-txt {
+    margin-right: 70px;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#consultoria-csc h1 {
+  margin-bottom: 50px;
+  color: #000;
+}
+
+#treinamentos-csc {
+    background: url(img/bg-treinamentos-csc.jpg), 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: top;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#treinamentos-csc h1 {
+    margin-bottom: 20px;
+}
+
+#treinamentos-csc img {
+    width: 350px;
+}
+
+#treinamentos-csc p {
+    margin-bottom: 10px;
+    padding: 25px 150px 0;
+}
+
+#grupos-csc {
+    margin-top: 70px;
+}
+
+#grupos-csc .title h6 {
+  color: #000;
+  text-align: center;
+  padding: 20px 100px;
+}
+
+#grupos-csc .title h3 {
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.img-logo-csc {
+    padding: 100px 30px;
+    display: flex;
+    place-content: center;
+}
+
+.btns-csc {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 62px;
+}
+
+.bloco-cadastrar-csc {
+    border: 1px solid #707070;
+    margin: 0 30px 25px;
+}
+
+.btn-blac-nopadding {
+    margin: 0;
+    background: #000;
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+    height: 62px;
+}
+
+.btn-white-nopadding {
+    margin: 0;
+    background: #fff;
+    border-radius: 0;
+    color: #000;
+    width: 100%;
+    height: 62px;
+}
+
+@media screen and (max-width: 630px) {
+  .bloco-csc {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+
+  #rp-csc img {
+    width: 100%;
+  }
+
+  #consultoria-csc img {
+    width: 100%;
+  }
+
+  .consult-csc-txt {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  #treinamentos-csc p {
+    padding: 0;
+  }
+
+  #treinamentos-csc img {
+    width: 290px;
+  }
+
+  #grupos-csc .title h6 {
+    padding: 0 15px;
+  }
+
+  .box-detals-csc {
+    padding: 70px 30px 20px 30px;
+    margin: -50px 15px;
+    height: 100%;
+  }
+
+  #info-csc {
+    margin: 50px 0px 120px;
+  }
+
+  .buttons-pesquisa-interna {
+    display: block;
+  }
+
+  #capitulos .card-body {
+    width: auto;
+    margin: 20px;
+  }
+
+  #page-relatorios-e-publicacoes-interna .bloco-solucoes {
+    max-width: 100%;
+  }
+
+  #pesquisa-resultados .card {
+    width: 100% !important;
+    height: auto;
+  }
+
+  #pesquisa-resultados {
+    text-align: center;
+  }
+
+  #apresentacao .objetivo .title h3 {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .bloco-cadastrar-csc {
+    border: 1px solid #707070;
+    margin: 15px;
+  }
+
+  #consultoria-csc {
+    padding: 30px 0px;
+  }
+}
+
+/* CSS SINGLE PRODUCT */
+
+#single-product-layout {
+    padding: 50px 0;
+}
+
+#single-product-layout .price {
+  margin: 0;
+}
+
+#single-product-layout img {
+  width: 100%;
+}
+
+#single-product h1 {
+    margin-top: 80px;
+}
+
+/* CSS CART PRODUCTS */
+
+#cart-products {
+    padding: 50px;
+}
+
+#cart-products th, #cart-products td {
+    padding: 10px;
+    border: 1px solid #e4e2e2;
+    text-align: center;
+}
+
+#cart-products td.product-thumbnail {
+    width: 120px;
+}
+
+#cart-products td.product-thumbnail img {
+    width: 100px;
+    height: auto;
+}
+
+#cart-products table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents {
+    width: 100%;
+}
+
+.cupom_descont {
+    max-width: 50%;
+    float: left;
+}
+
+.att_cart {
+    max-width: 50%;
+    float: right;
+    display: flex;
+}
+
+@media (max-width: 690px) {
+  .cupom_descont {
+    max-width: 100%;
+    float: none;
+  }
+
+  .att_cart {
+    max-width: 100%;
+    display: block;
+    float: none;
+  }
+
+  td.product-remove, td.product-thumbnail, td.product-name, td.product-price, td.product-quantity, td.product-subtotal {
+    width: 100%;
+  }
+}
+
+#cart-products .buy {
+    width: 165px;
+    line-height: 30px;
+    height: 28px;
+    background: #FBBB0D;
+    padding: 0px;
+
+}
+
+#cart-products .buy:hover {
+    width: 165px;
+    line-height: 30px;
+    height: 28px;
+    background: #12378B;
+}
+
+#cart-products input#coupon_code {
+    border: 1px solid #dbdbdb;
+    padding: 2px 10px;
+}
+
+#cart-products .input-text.qty.text {
+    width: 55px;
+    max-width: 100px;
+    padding: 0 5px;
+    border: 1px solid #d7d5d5;
+    text-align: center;
+}
+
+#cart-products table.shop_table.shop_table_responsive {
+    width: 100%;
+}
+
+th.align-left {
+  text-align: left !important;
+}
+
+.cart-subtotal th, .order-total th {
+    text-align: left !important;
+}
+
+.cart-subtotal td, .order-total td, .recurring-totals td {
+    text-align: right !important;
+}
+
+.recurring-totals th {
+    text-align: left !important;
+    font-size: 24px;
+}
+
+.checout-products {
+    float: right;
+    margin: 15px 0;
+}
+
+p#billing_first_name_field, p#billing_last_name_field, p#billing_company_field, p#billing_country_field, p#billing_postcode_field, p#billing_address_1_field, p#billing_city_field, p#billing_state_field, p#billing_phone_field, p#billing_email_field {
+    width: 50%!important;
+    padding: 0 5px;
+    max-width: 50%;
+    flex: 0 0 50%;
+    display: inline-flex;
+}
+
+span.select2-selection.select2-selection--single {
+    width: auto;
+    height: 40px;
+    margin-top: -3px;
+    display: flex;
+    place-items: center;
+    border: 0px solid #d7d7d7;
+    box-shadow: 0 0 3px #acacac;
+    padding: 7px;
+}
+
+#primary label {
+    width: auto;
+}
+
+textarea#order_comments {
+    height: 150px !important;
+    border: 0px solid #d7d7d7;
+    box-shadow: 0 0 3px #acacac;
+    padding: 7px;
+}
+
+p#billing_address_2_field {
+    display: none !important;
+}
+
+select#billing_country {
+    width: 208px !important;
+}
+
+input, select, textarea {
+    border: 0px solid #d7d7d7;
+    box-shadow: 0 0 3px #acacac;
+    padding: 7px;
+}
+
+label {
+    font-size: 16px;
+    color: #000000;
+}
+
+select, textarea {
+    font-size: 16px;
+    color: #797979;
+}
+
+@media (max-width: 690px) {
+    #primary {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+    
+    #cart-products .buy {
+    width: auto;
+    padding: 0px 10px;
+    }
+
+    span.select2-selection.select2-selection--single {
+    width: auto;
+    }
+
+    #primary .woocommerce .col2-set, #primary .woocommerce-page .col2-set {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  p#billing_first_name_field, p#billing_last_name_field, p#billing_company_field, p#billing_country_field, p#billing_postcode_field, p#billing_address_1_field, p#billing_city_field, p#billing_state_field, p#billing_phone_field, p#billing_email_field {
+    width: 100% !important;
+    padding: 0 10px;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  #cart-products {
+    padding: 0;
+  }
+}
+
+
+td, th, th {
+    border: 1px solid #cbcaca;
+    font-size: 12px;
+    padding: 5px 15px;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table {
+    width: 100%;
+}
+
+.btn-checkout {
+    width: 137px;
+    font-size: 12px;
+}
+
+ul {
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    display: block;
+    font-size: 16px;
+    color: #7d7d7d;
+}
+
+#order_comments_field label, #order_comments_field .input-text {
+    width: 100%;
+}
+
+span.woocommerce-input-wrapper {
+    width: 100%;
+}
+
+#cursosemdestaque ul.woocommerce {
+    margin-left: 35px !important;
+}

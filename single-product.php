@@ -34,17 +34,11 @@
 
         <div class="col-md-12 icons-cursos">
           <ul>
-            <li class="fa fa-calendar" style="margin:0px;">
-              <li><?php echo $date ?></li>
-            </li>
+            <li> <i class="fa fa-calendar"></i> <?php echo $date ?></li>
 
-            <li class="fa fa-clock-o" style="margin:0px;">
-              <li><?php echo $duration ?></li>
-            </li>
+            <li> <i class="fa fa-clock-o"></i> <?php echo $duration ?></li>
 
-            <li class="fa fa-map-marker" style="margin:0px;">
-              <li><?php echo $location ?></li>
-            </li>
+            <li> <i class="fa fa-map-marker"></i> <?php echo $location ?></li>
           </ul>
         </div>
 
@@ -75,9 +69,9 @@
       <div class="row">
         <div class="col-md-12 title">
           <?php if( $descriptive_title ): ?>
-            <h1>
+            <h2>
               <?php echo $descriptive_title ?>
-            </h1>
+            </h2>
           <?php endif; ?>
 
           <?php if( $descriptive_text ): ?>
@@ -94,7 +88,7 @@
 
   <section id="bloco-pesquisa">
     <div class="container">
-      <div class="row bg-treinamento-interno">
+      <div class="row " alt="" style="background:url(<?= $objective_section_image ?>) no-repeat 50% 45%">
         <div class="col-md-5 pesquisa">
           <?php if ( $objective ): ?>
             <h3 class="titles-sua-empresa">Objetivo</h3>
@@ -108,7 +102,7 @@
             <p class="description-sua-empresa"><?php echo $training ?></p>
           <?php endif ?>
 
-          <a href="<?php echo $add_to_cart_url ?>" class="btn btn-light btn-events" style="width: 230px; display: inline-block; line-height: 50px; height: 50px; font-size: 18px; padding: 0px;">Inscreva-se agora</a>
+          <a href="<?php echo $add_to_cart_url ?>" class="btn btn-light btn-events">Inscreva-se agora</a>
         </div>
 
         <div class="col-md-7 img-pesquisa">
@@ -116,42 +110,47 @@
       </div>
     </div>
   </section>
+<div id="sticky-wrapper" data-sticky-container>
 
-  <section id="metodologia">
-    <div class="container">
+
+  <section id="metodologia" >
+    <div class="container" >
       <div class="row">
         <div class="col-md-6 title">
-          <h1>Metotologia</h1>
+          <h2>Metotologia</h2>
 
           <p><?php echo $metodology_text ?></p>
 
-          <?php if ( count( $metodologies ) > 0 ): ?>
+          <?php if ($metodologies != null && count( $metodologies ) > 0 ): ?>
             <?php foreach ( $metodologies as $metodology ): ?>
               <h3><?php echo $metodology['title'] ?></h3>
               <h6><?php echo $metodology['description'] ?></h6>
             <?php endforeach ?>
           <?php endif ?>
         </div>
-        <div class="col-md-6">
-          <div class="row cursos">
-            <div class="col-12 photo-cursos"><img src="<?php echo get_the_post_thumbnail_url( $product->get_id() ) ?>"></a></div>
-            <div class="col-12"><p class="text-bloco" style="margin-top: 20px;">Dê o próximo passo na sua carreira com o <?php echo $product->get_name() ?></p></div>
-            <div class="col-12"><h6 class="price"><?php echo $product->get_price_html() ?></h6></div>
-            <!-- <div class="col-12"><p class="parcel-price">12 x de R$ 301,67</p></div> -->
-            <div class="col-12"><a  href="<?php echo $add_to_cart_url ?>" class="btn btn-blue">Inscreva-se agora</a></div>
-            <div class="col-12"><p class="text-bloco" style="margin-bottom: 10px;">Turma com vagas limitadas!</p></div>
+        <div class="col-md-6" >
+          <div  class="row cursos fixme" id="fixado" data-sticky data-sticky-class="no-left" data-margin-top="100" >
+            <!-- <div class="fixme"> -->
+
+              <div class="col-12 photo-cursos"><img src="<?php echo get_the_post_thumbnail_url( $product->get_id() ) ?>"></a></div>
+              <div class="col-12"><h5 class="text-bloco" style="margin-top: 20px;">Dê o próximo passo na sua carreira com o <?php echo $product->get_name() ?></h5></div>
+              <div class="col-12"><h5 class="price"><?php echo $product->get_price_html() ?></h5></div>
+              <!-- <div class="col-12"><p class="parcel-price">12 x de R$ 301,67</p></div> -->
+              <div class="col-12"><a  href="<?php echo $add_to_cart_url ?>" class="btn btn-blue">Inscreva-se agora</a></div>
+              <div class="col-12"><p class="text-bloco" style="margin-bottom: 10px;">Turma com vagas limitadas!</p></div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
   
-  <?php if ( count( $course_topics ) > 0 ): ?>
+  <?php if ($course_topics != null && count( $course_topics ) > 0 ): ?>
     <section id="materias">
       <div class="container">
         <div class="row">
           <div class="col-md-8 title">
-            <h1>O que você vai aprender</h1>
+            <h2>O que você vai aprender</h2>
             <ul class="to-know">
               <?php foreach ( $course_topics as 
                 $topic ): ?>
@@ -164,12 +163,16 @@
     </section>
   <?php endif ?>
 
+  </div>
+  
+    <div style="height:20px;"></div>
+    <div id="para"></div>
   <?php if ( count( $teachers ) > 0 ): ?>
     <section id="professores">
       <div class="container">
         <div class="row">
           <div class="col-md-12 title">
-            <h1>Professores</h1>
+            <h2>Professores</h2>
             <h6>Nossos professores ensinam a noite o que fazem durante o dia. Trazem toda sua experiência de mercado para te ajudar a chegar onde você merece</h6>
           </div>
         </div>
@@ -195,12 +198,15 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12 view-teachers">
-            <button type="button" class="btn btn-blue">Ver mais professores</button>
-        </div>
+          <?php if ( count( $teachers ) > 3 ): ?>
+            <div class="col-md-12 view-teachers">
+              <button type="button" class="btn btn-blue">Ver mais professores</button>
+            </div>
+          <?php endif ?>
       </div>
     </section>
   <?php endif ?>
+
 
 <?php get_template_part('inc/depoimentos'); ?>
 
@@ -222,7 +228,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 title">
-          <h1>Perguntas frequentes:</h1>
+          <h2>Perguntas frequentes:</h2>
         </div>
       </div>
 
@@ -376,14 +382,45 @@
   </section>
 
 </main>
+<script src="<?php echo get_template_directory_uri(); ?>/js/sticky-modified.js"></script>
+<script>
+  var sticky = new Sticky('[data-sticky]');
+</script>
 
 <script>
-  $('.carousel').carousel()
+  // $('.carousel').carousel()
 
   // JAVA SCRIPT DO ACCORDEON
 
-  $('.collapse').collapse()
+  // $('.collapse').collapse()
+
+  var fixmeTop = $('.fixme').offset().top,
+  width = document.getElementById("fixado").offsetWidth;
+
+  $(window).scroll(function() {
+      var currentScroll = $(window).scrollTop();
+      if($(window).width() >= 960){
+        if (currentScroll >= fixmeTop) {
+            $('.fixme').css({
+                zIndex: '99',
+                backgroundColor: 'white',
+                width: width,
+                left: '0',
+            });
+        } 
+      }
+  });
+  
+  var screenWidth = window.screen.width;
+  var fixado      = document.getElementById("fixado");
+  if (screenWidth < 960) {
+    fixado.removeAttribute('data-sticky');
+  }
 </script>
+
+
+
+
 
 <?php
 get_footer();
